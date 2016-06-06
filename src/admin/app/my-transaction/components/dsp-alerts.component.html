@@ -1,0 +1,66 @@
+<div class="container-body">
+
+	<div class="filter-container" *ngIf="getFilter().filterDSPAlerts">
+
+        <div class="item-container">
+            <div class="container">
+                <div class='cell'>
+                    <div class="container">
+                        <div class="cell filter-label width-50 padding-top-1 padding-bottom-1">Value Segment</div>
+                    </div>
+
+                    <div class="container">
+                        <div class="cell filter-label width-50 padding-top-1 padding-bottom-1">Threshold</div>
+                    </div>
+                </div>
+
+                <div class='cell'>
+                    <div class="container">
+                        <div class="cell filter-dropdown width-30 padding-top-1 padding-bottom-1">
+                            <select name="value_segment_filter" [(ngModel)]="vValueSegmentFilter"  (ngModelChange)="onFilterValueSegment($event)">
+                                <option value="">All</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="cell filter-dropdown width-30 padding-top-1 padding-bottom-1">
+                            <select name="value_segment_filter">
+                                <option value="">500.00 &nbsp; &#8369;</option>
+                                <option value="High">High</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+
+
+    <div class="item-container" *ngFor="#retailer of getRetailerAlert()">
+        <div class="container">
+            <div class='cell'>
+                <div class='container'><div class='cell padding-left-5 width-50 bold grey'># Route </div></div>
+                <div class='container'><div class='cell padding-left-5 width-50 bold'>{{retailer.retailer_name}}</div></div>
+                <div class='container'><div class='cell padding-left-5 width-50 italic'>{{retailer.retailer_min}}</div></div>
+                <div class='container'><div class='cell padding-left-5 width-50 grey'>Value Segment</div></div>
+                <div class='container'><div class='cell padding-left-5 width-50 grey'>Threshold hit</div></div>
+            </div>
+            <div class='cell'>
+                <div class='container'><div class='cell padding-right-5 width-50 align-right'></div></div>
+                <div class='container'><div class='cell padding-right-5 width-50 align-right'></div></div>
+                <div class='container'><div class='cell padding-right-5 width-50 align-right'></div></div>
+                <div class='container'><div class='cell padding-right-5 width-50 align-right'></div></div>
+                <div class='container'><div class='cell padding-right-5 width-50 align-right'>&nbsp; &#8369; </div></div>
+            </div>
+        </div>
+    </div>
+</div>

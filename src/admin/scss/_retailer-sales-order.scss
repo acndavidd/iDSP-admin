@@ -1,0 +1,26 @@
+.container-body{
+    .item-container {
+        .cell {
+            .filter-input{
+                padding-top: 7px;
+                padding-left: 24px;
+                top: 0;
+                
+                input {
+                    background: $white;
+                    height: 30px;
+                    border: 1px solid $dark-grey;
+                    width: 50%;
+                    -webkit-appearance: none;
+                    border-radius: 7px;
+                    padding-left: 15px;
+                    font-size: $filter-select;
+                    font-weight:lighter;
+                    appearance: none;
+                    cursor: pointer;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
