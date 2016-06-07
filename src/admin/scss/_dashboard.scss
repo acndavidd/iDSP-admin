@@ -4,17 +4,18 @@
     
     .date{
         width: 100%;
-        float: right;
+        float: left;
+        text-align: right;
     }
     
-    .content{
+    .dashboardcontent{
         width: calc(80%);
         margin: 0 10%;
         
         .title{
             float: left;
             width: 100%;
-            font-size: 1.5vw;
+            // font-size: 1.5vw;
         }
         
         .tiles{
@@ -23,10 +24,79 @@
             
             .tile{
                 float: left;
-                width: calc (100% / 3);
-                height: 200px;
+                width: calc(100% / 3 - 3%);
+                height: 150px;
                 margin: 1%;
                 border: 1px solid #EEE;
+                cursor: pointer;
+
+                &.purple{
+                    background-color: $purple;
+                }
+                
+                &.gray{
+                    background-color: $silver-sand;
+                }
+
+                &.red{
+                    background-color: $vivid-pink;
+                }
+
+                &.yellow{
+                    background-color: $ripe-lemon;
+                }
+                
+                &.blue{
+                    background-color: $picton-blue;
+                }
+                
+                &.orange{
+                    background-color: $jaffa;
+                }
+
+                .left{
+                    float: left;
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    vertical-align: middle;
+                    
+                    .innerleft{
+                        margin: auto;
+                        display: inline-block;
+                        color: $white;
+
+                        .value{
+                            font-size: $larger-text;
+                        }
+
+                        .desc{
+                            font-style: italic;
+                            font-size: $small-text;
+                        }
+                    }
+                }
+
+                .right{
+                    float: left;
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    vertical-align: middle;
+                    
+                    .icon{
+                        background: url('../img/icon-idsp-2/setting-grey.png')no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+                }
+
             }
         }
     }

@@ -14,14 +14,16 @@
       float: left;
       
       .default-box{
-        height: 3.5vw;
+        // height: 3.5vw;
+        height: 50px;
         width: 100%;
         
         .title{
           float: left;
           width: calc(86%);
           color: $white;
-          font-size: 1.5vw;
+          // font-size: 1.5vw;
+          font-size: $larger-text;
           padding: 1% 2%;
           font-weight: 600;
         }
@@ -29,14 +31,17 @@
         .title-logo{
           float: left;
           width: calc(8%);
-          padding: 0.6vw;
+          // padding: 0.6vw;
+          padding: 0.5%;
           
           .smart{
             background: url("../img/smart-logo.png") no-repeat;
             background-position: center;
-            background-size: 6vw;
-            width: 8vw;
-            height: 2.5vw;
+            // background-size: 6vw;
+            background-size: 75px;
+            // width: 8vw;
+            // height: 2.5vw;
+            height: 35px;
           }
         }
         
@@ -48,7 +53,8 @@
       float: left;
       width: 100%;
       background-color: $white;
-      height: 3vw;
+      // height: 3vw;
+      height: 40px;
       border-bottom: 1px solid $apple;
       
       .nav-left{
@@ -57,10 +63,13 @@
         
         .item{
           float: left;
-          width: 8vw;
+          // width: 8vw;
+          width: 100px;
           text-align: center;
-          font-size: 1vw;
-          padding: 0.9vw;
+          // font-size: 1vw;
+          font-size: $normal-text;
+          // padding: 0.9vw;
+          padding: 1%;
           border-right: 1px solid $apple;
           cursor: pointer;
           
@@ -87,15 +96,20 @@
           float: left;
           background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaGVpZ2h0PSIyNTYiIHdpZHRoPSIyNTYiIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4gIDxnPiAgICA8cGF0aCBpZD0icGF0aDEiIHRyYW5zZm9ybT0icm90YXRlKDAsMTI4LDEyOCkgdHJhbnNsYXRlKDExLjE5OTk5Njk0ODI0MjIsMCkgc2NhbGUoOCw4KSAgIiBmaWxsPSIjMjYyNjI2IiBkPSJNOS42OTk5Njc0LDE3LjkwMDAyNEwxOS41MDAwMzMsMTcuOTAwMDI0QzI0LjkwMDAwNCwxNy45MDAwMjQgMjkuMiwyMiAyOS4yLDI3LjEwMDAwNiAyOS4yLDI4LjkwMDAyNCAyOC43LDMwLjYwMDAwNiAyNy42OTk5OTgsMzJMMS41MDAwMDI0LDMyQzAuNTAwMDAwNzYsMzAuNjAwMDA2IC00LjkxNzgxOThFLTA4LDI4LjkwMDAyNCAwLDI3LjEwMDAwNiAtNC45MTc4MTk4RS0wOCwyMiA0LjI5OTk5NSwxNy45MDAwMjQgOS42OTk5Njc0LDE3LjkwMDAyNHogTTE0LjY5OTk3NiwwQzE4LjgwMDAxOSwwIDIyLjEwMDAxMywzLjMwMDAxODMgMjIuMTAwMDEzLDcuNDAwMDI0NCAyMi4xMDAwMTMsMTEuNSAxOC44MDAwMTksMTQuODAwMDE4IDE0LjY5OTk3NiwxNC44MDAwMTggMTAuNTk5OTkzLDE0LjgwMDAxOCA3LjI5OTk5OTgsMTEuNSA3LjI5OTk5OTgsNy40MDAwMjQ0IDcuMzk5OTc1OCwzLjMwMDAxODMgMTAuNjk5OTY5LDAgMTQuNjk5OTc2LDB6IiAvPiAgPC9nPjwvc3ZnPg==) no-repeat;
           background-position: center;
-          background-size: 2vw;
-          width: 3vw;
-          height: 3vw;
+          // background-size: 2vw;
+          // width: 3vw;
+          // height: 3vw;
+          background-size: 30px;
+          width: 30px;
+          height: 40px;
         }
         
         .desc{
           float: left;
-          font-size: 1vw;
-          padding: 0.9vw;
+          // font-size: 1vw;
+          // padding: 0.9vw;
+          font-size: $normal-text;
+          padding: 5%;
         }
         
       }
