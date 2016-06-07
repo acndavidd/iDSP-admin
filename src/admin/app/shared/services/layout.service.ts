@@ -155,7 +155,8 @@ export class LayoutService {
             pCurrent === 'CloseDay' ||
             pCurrent === 'Remittance' ||
             pCurrent === 'StockReturn' ||
-            pCurrent === 'Home') {
+            pCurrent === 'Home' ||
+            pCurrent === 'Dashboard') {
 
             this._pageNavigationService.resetListPreviousData();
 

@@ -1,6 +1,6 @@
 ///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
 import {bootstrap} from 'angular2/platform/browser';
-import {IDSPComponent} from './idsp.component';
+import {AdminComponent} from './admin.component';
 import {enableProdMode, provide, Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, BaseRequestOptions, RequestOptions, BrowserXhr} from 'angular2/http';
 import {Headers, XHRBackend} from 'angular2/http';
@@ -34,7 +34,7 @@ export class CustomBrowserXhr extends BrowserXhr {
 
 enableProdMode();
 
-bootstrap(IDSPComponent, [
+bootstrap(AdminComponent, [
     ROUTER_PROVIDERS,
     provide(LocationStrategy, { useClass: HashLocationStrategy }),
     provide(APP_BASE_HREF, { useValue: getPath() }),

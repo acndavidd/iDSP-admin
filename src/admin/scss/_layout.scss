@@ -21,3 +21,15 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
+
+.bodyContainer{
+  // padding-top: 140px;
+}
+
+#content{
+  padding-top: 150px;
+
+  &.nopadding{
+    padding-top: 0;
+  }
+}

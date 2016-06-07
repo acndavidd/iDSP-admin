@@ -6,26 +6,26 @@ import {MatchMediaService} from './shared/services/match-media.service';
 import {LayoutService} from './shared/services/layout.service';
 import {HeaderService} from './shared/services/header.service';
 import {PageNavigationService} from './shared/services/page-navigation.service';
-import {SQLiteService} from './shared/services/sqlite.service';
+// import {SQLiteService} from './shared/services/sqlite.service';
 import {AuthenticationService} from './shared/services/authentication.service';
 import {LoginComponent} from './login/components/login.component';
 import {HeaderComponent} from './shared/components/header.component';
-import {FooterMenuComponent} from './shared/components/footer-menu.component';
+// import {FooterMenuComponent} from './shared/components/footer-menu.component';
 import {MainPageComponent} from './shared/components/main-page.component';
-import {MyTransactionComponent} from './my-transaction/components/my-transaction.component';
-import {BasicCallProcedureComponent} from './basic-call-procedure/components/basic-call-procedure.component';
-import {CloseDayComponent} from './close-day/components/close-day.component';
-import {SettingsComponent} from './settings/components/settings.component';
+// import {MyTransactionComponent} from './my-transaction/components/my-transaction.component';
+// import {BasicCallProcedureComponent} from './basic-call-procedure/components/basic-call-procedure.component';
+// import {CloseDayComponent} from './close-day/components/close-day.component';
+// import {SettingsComponent} from './settings/components/settings.component';
 import {VerificationComponent} from './verification/components/verification.component';
 import {MpinComponent} from './login/components/mpin.component';
 import {ModalComponent} from './shared/components/modal.component';
-import {RetailerRouteComponent} from './my-transaction/components/retailer-route.component';
+// import {RetailerRouteComponent} from './my-transaction/components/retailer-route.component';
 import {Modal} from './shared/services/modal.service';
-import {RetailerService} from './shared/services/retailer.service';
-import {RetailerSalesOrderComponent} from './basic-call-procedure/components/retailer-sales-order.component';
-import {DetailRetailerComponent} from './basic-call-procedure/components/detail-retailer.component';
-import {SalesOrderPaymentComponent} from './basic-call-procedure/components/sales-order-payment.component';
-import {LeftMenuComponent} from './shared/components/left-menu.component';
+// import {RetailerService} from './shared/services/retailer.service';
+// import {RetailerSalesOrderComponent} from './basic-call-procedure/components/retailer-sales-order.component';
+// import {DetailRetailerComponent} from './basic-call-procedure/components/detail-retailer.component';
+// import {SalesOrderPaymentComponent} from './basic-call-procedure/components/sales-order-payment.component';
+// import {LeftMenuComponent} from './shared/components/left-menu.component';
 import {IdleService} from './shared/services/idle.service';
 import {Observable} from 'rxjs/Observable';
 
@@ -33,37 +33,39 @@ declare var FastClick: FastClickStatic;
 declare var configChannel: any;
 
 @Component({
-    selector: 'idsp-app',
+    selector: 'admin-app',
     template: `
-        <div id="content"
+        <div id="content" [ngClass] = "{nopadding: isFullScreen()}"
             (window:resize)="OnResize()"
             (window:scroll)="OnScroll()"
             (window:click)="OnClick()">
             <idsp-header></idsp-header>
             <my-modal></my-modal>
             <left-menu></left-menu>
-            <router-outlet></router-outlet>
+            <div class="bodyContainer">
+                <router-outlet></router-outlet>
+            </div>
             <idsp-footer-menu></idsp-footer-menu>
         </div>
     `,
 
     directives: [
         HeaderComponent,
-        FooterMenuComponent,
+        // FooterMenuComponent,
         ModalComponent,
         ROUTER_DIRECTIVES,
-        LeftMenuComponent
+        // LeftMenuComponent
     ],
     providers: [
         ROUTER_PROVIDERS,
         MatchMediaService,
         LayoutService,
         PageNavigationService,
-        SQLiteService,
+        // SQLiteService,
         AuthenticationService,
         Modal.ModalService,
         HeaderService,
-        RetailerService,
+        // RetailerService,
         IdleService
     ]
 })
@@ -96,7 +98,7 @@ declare var configChannel: any;
     }
 
 ])
-export class IDSPComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
     globalListenFunc: Function;
     timerObservables: Observable<any>;
@@ -130,7 +132,7 @@ export class IDSPComponent implements OnInit {
     isFullScreen() {
         let vCurrentPage: string = this._layoutService.getCurrentPage();
         return !vCurrentPage || vCurrentPage === 'GetStarted' || vCurrentPage === 'Login' ||
-        vCurrentPage === 'Register';
+        vCurrentPage === 'Register' || vCurrentPage === 'Mpin';
     }
 
     isSmallScreen() {
