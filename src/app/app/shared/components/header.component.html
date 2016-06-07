@@ -1,4 +1,5 @@
-<div class="header-container"  *ngIf="getLayout().appHeader">
+<!--mobile view-->
+<div class="header-container"  *ngIf="getLayout().appHeader && !getResize().mediumUp">
 	<div class="main-box">
         <div class="default-box">
         <div id="header-title-id" class="title">{{getTitle()}}</div>
@@ -9,4 +10,34 @@
             <div id="header-add-btn"class="header-icon add" *ngIf="getHeaderLayout().add" (click)="toggleAdd()"></div>
         </div>
     </div>
+</div>
+
+<!--web view-->
+<div class="header-container-web"  *ngIf="getLayout().appHeader && getResize().mediumUp">
+	<div class="main-box">
+        <div class="default-box">
+            <div id="header-title-id" class="title">{{getTitle()}}</div>
+            <div class="title-logo">
+                <div class="smart"></div>
+            </div>
+            <div class="clearFix"></div>
+        </div>
+    </div>
+    <div class="nav-box">
+        <div class="nav-left">
+            <div class="item" [ngClass]="{active: getNavigationState().dashboard}" (click)="setNavigationState('dashboard')">Dashboard</div>
+            <div class="item" [ngClass]="{active: getNavigationState().users}" (click)="setNavigationState('users')">Users</div>
+            <div class="item" [ngClass]="{active: getNavigationState().retailers}" (click)="setNavigationState('retailers')">Retailers</div>
+            <div class="item" [ngClass]="{active: getNavigationState().offers}" (click)="setNavigationState('offers')">Offers</div>
+            <div class="item" [ngClass]="{active: getNavigationState().products}" (click)="setNavigationState('products')">Products</div>
+            <div class="clearFix"></div>
+        </div>
+        <div class="nav-right">
+            <div class="pic"></div>
+            <div class="desc">Welcome Irvinder!</div>
+            <div class="clearFix"></div>
+        </div>
+        <div class="clearFix"></div>
+    </div>
+    <div class="clearFix"></div>
 </div>

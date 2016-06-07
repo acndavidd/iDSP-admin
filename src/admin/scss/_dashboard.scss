@@ -1,0 +1,37 @@
+// web view
+.dashboardCont{
+    width: 100%;
+    
+    .date{
+        width: 100%;
+        float: right;
+    }
+    
+    .content{
+        width: calc(80%);
+        margin: 0 10%;
+        
+        .title{
+            float: left;
+            width: 100%;
+            font-size: 1.5vw;
+        }
+        
+        .tiles{
+            float: left;
+            width: 100%;
+            
+            .tile{
+                float: left;
+                width: calc (100% / 3);
+                height: 200px;
+                margin: 1%;
+                border: 1px solid #EEE;
+            }
+        }
+    }
+    
+    .clearFix{
+        clear: both;
+    }
+}

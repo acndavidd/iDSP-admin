@@ -1,0 +1,21 @@
+@import '../node_modules/spinkit/scss/spinners/7-three-bounce';
+@import '../node_modules/spinkit/scss/spinners/8-circle';
+
+@import 'global-parameter';
+@import 'global';
+
+@import "layout";
+@import "header";
+
+@import "login";
+@import "home";
+@import "verification";
+@import "mpin";
+
+@import "splash";
+@import "left-menu";
+
+@import "modal-box";
+@import "modal-verification-code";
+
+@import "dashboard";

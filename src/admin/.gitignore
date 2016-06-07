@@ -1,0 +1,10 @@
+node_modules
+typings
+js
+.tscache
+*.tmp.txt
+*.js.map
+app/**/*.js
+models/*.js
+.baseDir.js
+config/service.json

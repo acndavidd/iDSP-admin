@@ -1,0 +1,39 @@
+.home-container {
+    width: 100%;
+
+    .home-item-box {
+        
+        display: inline-block;
+        width: 100%;
+        .separator {
+            border-bottom: 1px solid $white-smoke;        
+        }
+        .home-table {
+            display: table;
+            width: 100%;
+            padding-top: 1vw;
+            padding-bottom: 1vw;
+        }
+        .cell {
+            display:table-cell;
+            font-size: 5vw;
+            height: 16vw;
+            vertical-align:middle;
+
+            &.single {
+                width: 70%;
+                padding-left: 3vw;
+            }
+
+            &.icon {
+                width: 30%;
+            }
+
+        }
+    }
+}
+
+
+
+
+

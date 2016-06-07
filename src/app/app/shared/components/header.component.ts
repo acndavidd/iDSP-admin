@@ -56,4 +56,16 @@ export class HeaderComponent implements OnInit {
     toggleAdd() {
         this._layoutService.toggleAdd();
     }
+    
+    getResize(){
+        return this._matchMediaService.getMm();
+    }
+    
+    setNavigationState(navigation:string) {
+        this._headerService.setNavigationState(navigation);
+    }
+    
+    getNavigationState() {
+        return this._headerService.getNavigationState();
+    }
 }

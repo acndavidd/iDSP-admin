@@ -1,0 +1,102 @@
+.footer-menu {
+width: 100%;
+height: 3.1em;
+display: block;
+background-color: $footer-background;
+z-index: 100;
+position: fixed;
+bottom: 0em;
+//border-top: 1px solid #bcbac1;
+  .column {
+    width: 25%;
+    float: left;
+    margin: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      .my-transaction {
+        display: block;
+        height: 1.8em;
+        width: 100%;
+        margin-top: 0.1em;
+        cursor: pointer;
+        background: 
+        url("../img/icon-idsp/startday-grey.png")
+        no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 1.6em;
+          &.active {
+            background: url("../img/icon-idsp/my-transaction-turquoise.png") no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 1.6em;
+          } 
+      }
+      .basic-procedure {
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin-top: 2px;
+        cursor: pointer;
+        background: 
+        url("../img/icon-idsp/bcp-grey.png")
+        no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 33px;
+          &.active {
+            background: url("../img/icon-idsp/bcp-turqoise.png") no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 33px;
+          }
+      }
+      .close-day {
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin-top: 2px;
+        cursor: pointer;
+        background: 
+        url("../img/icon-idsp/closeday-grey.png")
+        no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 22px;
+          &.active {
+            background: url("../img/icon-idsp/closeday-turqoise.png") no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 22px;
+          }
+       }
+      .settings {
+        display: block;
+        height: 30px;
+        width: 100%;
+        margin-top: 2px;
+        cursor: pointer;
+        background: 
+        url("../img/icon-idsp/setting-grey.png")
+        no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 28px;
+          &.active {
+            background: url("../img/icon-idsp/setting-turqoise.png") no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            background-size: 28px;
+          }
+      }
+  }
+  .text {
+      font-size: $footer-normal;
+      color: $grey;
+      text-align: center;
+      margin-bottom: 1px;
+      padding-top: 2px;
+      &.active {
+        color: $deep-cyan;
+     }
+  }
+}
