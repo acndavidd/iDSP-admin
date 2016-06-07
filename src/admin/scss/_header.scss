@@ -20,19 +20,19 @@
         
         .title{
           float: left;
-          width: calc(86%);
+          width: calc(90% - 40px);
           color: $white;
           // font-size: 1.5vw;
           font-size: $larger-text;
-          padding: 1% 2%;
+          padding: 12px 20px;
           font-weight: 600;
         }
         
         .title-logo{
           float: left;
-          width: calc(8%);
+          width: calc(10% - 12px);
           // padding: 0.6vw;
-          padding: 0.5%;
+          padding: 6px;
           
           .smart{
             background: url("../img/smart-logo.png") no-repeat;
@@ -69,7 +69,7 @@
           // font-size: 1vw;
           font-size: $normal-text;
           // padding: 0.9vw;
-          padding: 1%;
+          padding: 11.5px;
           border-right: 1px solid $apple;
           cursor: pointer;
           
@@ -109,7 +109,7 @@
           // font-size: 1vw;
           // padding: 0.9vw;
           font-size: $normal-text;
-          padding: 5%;
+          padding: 12px ;
         }
         
       }

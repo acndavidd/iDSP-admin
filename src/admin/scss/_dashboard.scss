@@ -24,10 +24,9 @@
             
             .tile{
                 float: left;
-                width: calc(100% / 3 - 3%);
+                width: calc(100% / 3 - 20px);
                 height: 150px;
-                margin: 1%;
-                border: 1px solid #EEE;
+                margin: 10px;
                 cursor: pointer;
 
                 &.purple{

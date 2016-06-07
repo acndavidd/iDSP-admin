@@ -7,7 +7,7 @@ import {HeaderService} from '../../shared/services/header.service';
 import {Layout} from '../../../models/layout';
 
 @Component({
-    selector: 'idsp-header',
+    selector: 'admin-header',
     templateUrl: 'app/shared/components/header.component.html'
 })
 
@@ -37,20 +37,8 @@ export class HeaderComponent implements OnInit {
         return this._layoutService.getLayout();
     }
 
-    getHeaderLayout() {
-        return this._layoutService.getHeaderLayout();
-    }
-
     goToPreviousPage() {
         this._pageNavigationService.gotoPreviousPage();
-    }
-
-    toggleSearch() {
-        this._layoutService.setSearch();
-    }
-
-    toggleFilter() {
-        this._layoutService.setFilter();
     }
 
     toggleAdd() {

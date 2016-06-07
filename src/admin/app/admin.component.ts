@@ -39,7 +39,7 @@ declare var configChannel: any;
             (window:resize)="OnResize()"
             (window:scroll)="OnScroll()"
             (window:click)="OnClick()">
-            <idsp-header></idsp-header>
+            <admin-header></admin-header>
             <my-modal></my-modal>
             <left-menu></left-menu>
             <div class="bodyContainer">

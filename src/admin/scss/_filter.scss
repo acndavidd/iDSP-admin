@@ -1,0 +1,17 @@
+.filterCont{
+    width: 100%;
+    background-color: #EEE;
+
+    .item{
+        width: calc(100% - 20px);
+        padding: 5px 10px;
+
+        .label{
+            width: 100%;
+        }
+
+        .value{
+            width: 100%;
+        }
+    }
+}

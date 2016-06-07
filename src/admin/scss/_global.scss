@@ -7,6 +7,43 @@ START WEB ADMIN
     width: 30%;
     background-color: $grey;
 }
+
+.generalContainer{
+    width: 100%;
+
+    .infoCont{
+        width: 100%;
+
+        .innerInfo{
+            float: left;
+            width: calc(100% / 2);
+
+            &.navigation{
+                font-size: $small-text;
+                text-align: left;
+            }
+
+            &.date{
+                text-align: right;
+            }
+        }
+    }
+
+    .left{
+        float: left;
+        width: 20%;
+    }
+    
+    .right{
+        float: left;
+        width: calc(80% - 20px);
+        margin-left: 20px;
+    }
+}
+
+.clearFix{
+    clear: both;
+}
 /*
 ===========================================================
 END WEB ADMIN
