@@ -8,8 +8,8 @@ import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 
 @Component({
-    selector: 'dashboard',
-    templateUrl: './app/dashboard/components/dashboard.component.html',
+    selector: 'products',
+    templateUrl: './app/products/components/products.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -17,7 +17,7 @@ import {NgModel} from 'angular2/common';
     ],
 })
 
-export class DashboardComponent {
+export class ProductsComponent {
     private vDate: Date;
     
     constructor(
@@ -27,9 +27,9 @@ export class DashboardComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('Dashboard');
+        this._layoutService.setCurrentPage('Products');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Dashboard');
+        this._headerService.setNavigationState('Products');
         this.vDate = new Date();
     }
     

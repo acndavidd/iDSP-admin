@@ -63,6 +63,7 @@ export class HeaderComponent implements OnInit {
     
     setNavigationState(navigation:string) {
         this._headerService.setNavigationState(navigation);
+        this._pageNavigationService.navigate(navigation,null,null);
     }
     
     getNavigationState() {

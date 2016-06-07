@@ -7,11 +7,11 @@ export class HeaderService {
     vTitle: string;
     
     navState = {
-        dashboard: false,
-        users: false,
-        retailers: false,
-        offers: false,
-        products: false
+        Dashboard: false,
+        Users: false,
+        Retailers: false,
+        Offers: false,
+        Products: false
     };
 
     constructor() {}

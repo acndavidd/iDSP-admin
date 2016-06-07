@@ -9,6 +9,7 @@ import {MpinComponent} from '../../login/components/mpin.component';
 import {LoginComponent} from '../../login/components/login.component';
 // import {HomeComponent} from '../../shared/components/home.component';
 import {DashboardComponent} from '../../dashboard/components/dashboard.component';
+import {ProductsComponent} from '../../products/components/products.component';
 
 @Component({
     selector : 'main-page',
@@ -32,6 +33,11 @@ import {DashboardComponent} from '../../dashboard/components/dashboard.component
         path: '/dashboard',
         name: 'Dashboard',
         component: DashboardComponent
+    },
+    {
+        path: '/products',
+        name: 'Products',
+        component: ProductsComponent
     }
 ])
 
