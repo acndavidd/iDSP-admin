@@ -565,7 +565,7 @@ LIST VIEW - TEXT
         }
         
         .item-notification {   
-            font-size: $filter-select;
+            font-size: $normal-text;
             background-color: $apple;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -597,7 +597,7 @@ LIST VIEW - TEXT
 
                 &.input-peso {
                     text-align: right;
-                    font-size: $content-normal;
+                    font-size: $large-text;
                     padding: 0% 11% 0% 0%;
                     @media screen and (-webkit-min-device-pixel-ratio: 0) {
                         background-image: url(#{$icon-peso});
