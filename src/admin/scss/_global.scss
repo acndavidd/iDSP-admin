@@ -3,10 +3,88 @@
 START WEB ADMIN
 ===========================================================
 */
-.filter-by {
-    width: 30%;
-    background-color: $grey;
+//HEADER
+h1{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
+
+h2{
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+//COLOR
+.green { color: $apple; }
+
+//LINK
+a{
+    color: $vivid-pink;
+}
+
+//PAGINATION
+
+    .paging{
+
+        // margin-right: 0px;
+
+        ul.pagination li {display: inline;}
+
+        ul.pagination li a {
+            color: $white;
+            float: right;
+            padding: 8px 16px;
+            background-color:$apple;
+            border: 1px solid $white;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        ul.pagination li a.active {
+            background-color: $gainsboro;
+            color: black;
+        }
+
+        ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+    }
+        
+
+//TABLE
+table{
+    text-align:center;
+    border: 1px solid $white;
+    border-collapse: collapse;
+}
+
+td{
+    width: 150px;
+    height: 40px;
+    border: 1px solid $white;
+}
+
+tr{
+    border: 1px solid $white;
+    &.green { 
+        background-color:$apple;
+        color:white;
+        font-weight: bold;
+    }
+    &.gainsboro { 
+        background-color: $gainsboro; 
+        color:black;
+    }
+    &.white-smoke { 
+        background-color: $white-smoke; 
+        color:black;
+    }
+}
+
 
 .generalContainer{
     width: 100%;
@@ -880,17 +958,11 @@ LIST VIEW - FILTER
             }
         }
     }
+}
 
  /*
 ===========================================================
 END OF LIST VIEW - FILTER
 ===========================================================
-*/   
-
-
-
-}
-
-
-
+*/      
 
