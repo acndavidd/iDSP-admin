@@ -86,6 +86,9 @@ export class LayoutService {
         else if (
             pCurrent === 'Home' ||
             pCurrent === 'Dashboard' ||
+            pCurrent === 'Users' ||
+            pCurrent === 'Retailers' ||
+            pCurrent === 'Offers' ||
             pCurrent === 'Products') {
 
             this._pageNavigationService.resetListPreviousData();

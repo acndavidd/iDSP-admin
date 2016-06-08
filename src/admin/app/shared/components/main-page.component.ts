@@ -10,6 +10,9 @@ import {LoginComponent} from '../../login/components/login.component';
 // import {HomeComponent} from '../../shared/components/home.component';
 import {DashboardComponent} from '../../dashboard/components/dashboard.component';
 import {ProductsComponent} from '../../products/components/products.component';
+import {UsersComponent} from '../../users/components/users.component';
+import {RetailersComponent} from '../../retailers/components/retailers.component';
+import {OffersComponent} from '../../offers/components/offers.component';
 
 @Component({
     selector : 'main-page',
@@ -33,6 +36,21 @@ import {ProductsComponent} from '../../products/components/products.component';
         path: '/dashboard',
         name: 'Dashboard',
         component: DashboardComponent
+    },
+    {
+        path: '/users',
+        name: 'Users',
+        component: UsersComponent
+    },
+    {
+        path: '/retailers',
+        name: 'Retailers',
+        component: RetailersComponent
+    },
+    {
+        path: '/offers',
+        name: 'Offers',
+        component: OffersComponent
     },
     {
         path: '/products',
