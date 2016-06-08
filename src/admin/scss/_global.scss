@@ -8,13 +8,13 @@ START WEB ADMIN
     background-color: $grey;
 }
 
-.generalContainer{
+.general-container{
     width: 100%;
 
-    .infoCont{
+    .info-cont{
         width: 100%;
 
-        .innerInfo{
+        .inner-info{
             float: left;
             width: calc(100% / 2);
 
@@ -38,10 +38,38 @@ START WEB ADMIN
         float: left;
         width: calc(80% - 20px);
         margin-left: 20px;
+
+        .description-cont{
+            width: 100%;
+
+            .label{
+                float: left;
+                width: 80%;
+            }
+
+            .button-cont{
+                width: 20%;
+                float: left;
+
+                .button{
+                    float: right;
+                }
+            }
+        }
     }
 }
 
-.clearFix{
+// button
+.button{
+    width: 75px;
+    padding: 6px;
+    border-radius: 4px;
+    text-align: center;
+    color: $white;
+    background-color: $sulu;
+} 
+
+.clear-fix{
     clear: both;
 }
 /*

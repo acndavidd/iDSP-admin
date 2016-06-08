@@ -18,7 +18,29 @@ export class FilterComponent {
         category: '',
         subcategory: '',
         productid: '',
-        desc: ''
+        desc: '',
+        datefrom: '',
+        dateto: '',
+        dspname: '',
+        dspmin: '',
+        retailername: '',
+        orderno: '',
+        remittancetype: '',
+        retailermin: '',
+        amountfrom: '',
+        amountto: '',
+        role: '',
+        min: '',
+        name: '',
+        supervisor: '',
+        outlettype: '',
+        brand: '',
+        day: '',
+        month: '',
+        year: '',
+        offerid: '',
+        status: '',
+        title: ''
     };
 
     constructor (
@@ -33,5 +55,13 @@ export class FilterComponent {
 
     getFilterStatus() {
         return this._layoutService.vFilterState;
+    }
+
+    setFilterValue(index:string, value:string) {
+        this.filter[index] = value;
+    }
+
+    doFilter() {
+        console.log('log2 ' + this.filter['dateto']);
     }
 }

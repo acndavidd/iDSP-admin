@@ -13,6 +13,7 @@ import {ProductsComponent} from '../../products/components/products.component';
 import {UsersComponent} from '../../users/components/users.component';
 import {RetailersComponent} from '../../retailers/components/retailers.component';
 import {OffersComponent} from '../../offers/components/offers.component';
+import {RemittanceComponent} from '../../dashboard/components/remittance.component';
 
 @Component({
     selector : 'main-page',
@@ -56,6 +57,11 @@ import {OffersComponent} from '../../offers/components/offers.component';
         path: '/products',
         name: 'Products',
         component: ProductsComponent
+    },
+    {
+        path: '/remittance',
+        name: 'Remittance',
+        component: RemittanceComponent
     }
 ])
 

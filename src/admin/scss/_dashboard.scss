@@ -1,5 +1,5 @@
 // web view
-.dashboardCont{
+.dashboard-cont{
     width: 100%;
     
     .date{
@@ -8,7 +8,7 @@
         text-align: right;
     }
     
-    .dashboardcontent{
+    .dashboard-content{
         width: calc(80%);
         margin: 0 10%;
         
@@ -61,7 +61,7 @@
                     justify-content: center;
                     vertical-align: middle;
                     
-                    .innerleft{
+                    .inner-left{
                         margin: auto;
                         display: inline-block;
                         color: $white;
@@ -98,9 +98,5 @@
 
             }
         }
-    }
-    
-    .clearFix{
-        clear: both;
     }
 }
