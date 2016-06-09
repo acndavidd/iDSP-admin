@@ -14,6 +14,8 @@ body{
 	height: 100%;
 	width: 100%;
   font-size: 13px;
+  min-width:1024px;
+  overflow:auto;
 	// overflow: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -23,12 +25,14 @@ body{
     user-select: none;
 }
 
-.bodyContainer{
+.body-container{
   padding: 0 20px 20px 20px;
-  margin-left: auto;
+  // margin-left: auto;
   margin-right: auto;
   max-width: 1320px;
   min-height: 500px;
+  min-width:1024px;
+  overflow:auto;
 }
 
 #content{

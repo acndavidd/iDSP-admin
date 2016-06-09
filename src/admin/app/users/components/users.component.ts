@@ -38,9 +38,14 @@ export class UsersComponent {
         return this.vDate.toLocaleDateString('en-US');
     }
     
-    goToDetail(name:string) {
-        // this._headerService.setNavigationState(navigation);
+
+
+    goToDetail(navigation:string) {
         this._pageNavigationService.navigate('Users', null, null);
+    }
+    
+    goToDSPRoute(navigation:string) {
+        this._pageNavigationService.navigate('Users/UserRetailerRoute', null, null);
     }
 
     getResize() {

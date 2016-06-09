@@ -34,4 +34,20 @@ export class LeftMenuComponent {
     getFilterStatus() {
         return this._layoutService.vFilterState;
     }
+
+    goToUserDetail() {
+        this._pageNavigationService.navigate('Users/UserDetail', null, null);
+    }
+
+    goToUserInventory() {
+        this._pageNavigationService.navigate('Users/UserInventory', null, null);
+    }
+
+    goToUserSalesTarget() {
+        this._pageNavigationService.navigate('Users/UserSalesTarget', null, null);
+    }
+
+    goToUserRoute() {
+        this._pageNavigationService.navigate('Users/UserRetailerRoute', null, null);
+    }
 }
