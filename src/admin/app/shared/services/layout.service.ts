@@ -216,7 +216,7 @@ export class LayoutService {
             this.vFilterState.dspmin = true;
             this.vFilterState.amount = true;
             this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'VisitedRetailers') {
+        }else if(this.vCurrentPage === 'VisitedRetailer') {
             this.vFilterState.date = true;
             this.vFilterState.retailername = true;
             this.vFilterState.dspname = true;

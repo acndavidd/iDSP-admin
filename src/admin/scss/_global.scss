@@ -17,6 +17,8 @@ h2{
 h3{
     font-size: 1.1rem;
     font-weight: 600;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
 }
 
 //COLOR
@@ -25,6 +27,7 @@ h3{
 //LINK
 a{
     color: $vivid-pink;
+    cursor: pointer;
 
     &.underline-link{
         text-decoration:underline;

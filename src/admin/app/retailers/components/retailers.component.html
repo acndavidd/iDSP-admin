@@ -1,7 +1,8 @@
+
 <div class="general-container">
     <div class="info-cont">
         <div class="inner-info navigation">
-            My Dasboard >> Retailers >> Retailer List
+            Retailers >> Retailers List
         </div>
         <div class="inner-info date">
             {{getToday()}}
@@ -13,7 +14,47 @@
         <filter></filter>
     </div>
     <div class="right">
-        <h1>Retailer List</h1>
+        <h1>Retailers List</h1>
+        <h3><div class="green">Total : 555 Retailer</div></h3>
+        <div class="table-cont">
+            <div class="scrolled-x">
+                <table id="table" class="main-table">
+                    <tr class="main green">
+                        <td class="main-td">Retailer MIN</td>
+                        <td class="main-td">Retailer Name</td>
+                        <td class="main-td">Outlet Type</td>
+                        <td class="main-td">Sub Outlet Type</td>
+                        <td class="main-td">DSP Name</td>
+                    </tr>
+                    <tr class="main gainsboro">
+                        <td class="main-td">9999900001</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToDetail()">Gloria Cell</a></td>
+                        <td class="main-td">Modern Channel</td>
+                        <td class="main-td">Sub outlet type A</td>
+                        <td class="main-td">Agnes Saraswati</td>
+                    </tr>
+                    <tr class="main white-smoke">
+                        <td class="main-td">9999900002</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToDetail()">Bird Cell</a></td>
+                        <td class="main-td">Retailer Shop</td>
+                        <td class="main-td">Sub outlet type B</td>
+                        <td class="main-td">Agnes Saraswati</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="paging">
+                <ul class="pagination">
+                    <li><a href="">&raquo;</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a class="active" href="">1</a></li>
+                    <li><a href="">&laquo;</a></li>
+                </ul>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
     </div>
     <div class="clear-fix"></div>
-</div>
