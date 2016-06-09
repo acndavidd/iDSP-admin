@@ -244,13 +244,13 @@ export class LayoutService {
             this.vFilterState.subcategory = true;
             this.vFilterState.productid = true;
             this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'SalesTarget') {
+        }else if(this.vCurrentPage === 'UsersSalesTarget') {
             this.vFilterState.month = true;
             this.vFilterState.year = true;
             this.vFilterState.brand = true;
             this.vFilterState.category = true;
             this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'RetailerRoute') {
+        }else if(this.vCurrentPage === 'UsersRetailerRoute') {
             this.vFilterState.day = true;
             this.vFilterState.min = true;
             this.vFilterState.retailername = true;

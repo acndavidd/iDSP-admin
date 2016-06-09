@@ -63,26 +63,6 @@ import {LayoutUserComponent} from '../../users/components/layout-user.component'
         name: 'Products',
         component: ProductsComponent
     },
-    {
-        path: '/userDetail',
-        name: 'UserDetail',
-        component: UserDetailComponent
-    },
-    {
-        path: '/userInventory',
-        name: 'UserInventory',
-        component: UserInventoryComponent
-    },
-    {
-        path: '/userSalesTarget',
-        name: 'UserSalesTarget',
-        component: UserSalesTargetComponent
-    },
-    {
-        path: '/userRetailerRoute',
-        name: 'UserRetailerRoute',
-        component: UserRetailerRouteComponent
-    },
     // Dashboard
     {
         path: '/remittance',

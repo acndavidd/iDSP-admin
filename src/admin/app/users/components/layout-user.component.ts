@@ -8,6 +8,9 @@ import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 import {UserDetailComponent} from './user-detail.component';
+import {UserInventoryComponent} from './user-inventory.component';
+import {UserRetailerRouteComponent} from './user-retailer-route.component';
+import {UserSalesTargetComponent} from './user-sales-target.component';
 
 @Component({
     selector: 'layout-user',
@@ -22,11 +25,26 @@ import {UserDetailComponent} from './user-detail.component';
 
 @RouteConfig([
     {
-        path: '/userDetail2',
-        name: 'UserDetail2',
+        path: '/userDetail',
+        name: 'UserDetail',
         component: UserDetailComponent,
         useAsDefault: true
-    }
+    },
+    {
+        path: '/userInventory',
+        name: 'UserInventory',
+        component: UserInventoryComponent
+    },
+    {
+        path: '/userSalesTarget',
+        name: 'UserSalesTarget',
+        component: UserSalesTargetComponent
+    },
+    {
+        path: '/userRetailerRoute',
+        name: 'UserRetailerRoute',
+        component: UserRetailerRouteComponent
+    },
 ])
 
 export class LayoutUserComponent {
@@ -39,9 +57,7 @@ export class LayoutUserComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UsersDetail');
         this._headerService.setTitle('iDSP Administration Panel');
-        // this._headerService.setNavigationState('Products');
         this.vDate = new Date();
     }
     

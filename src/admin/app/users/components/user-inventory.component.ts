@@ -29,9 +29,8 @@ export class UserInventoryComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UserInventory');
+        this._layoutService.setCurrentPage('UsersInventory');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('UserInventory');
         this.vDate = new Date();
     }
     

@@ -29,9 +29,8 @@ export class UserSalesTargetComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UserSalesTarget');
+        this._layoutService.setCurrentPage('UsersSalesTarget');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('UserSalesTarget');
         this.vDate = new Date();
     }
     
