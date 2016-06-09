@@ -40,7 +40,7 @@ export class UsersComponent {
     }
     
 
-    gotoDetail(navigation:string) {
+    goToDetail(navigation:string) {
         this._headerService.setNavigationState(navigation);
         this._pageNavigationService.navigate('UserDetail', null, null);
     }

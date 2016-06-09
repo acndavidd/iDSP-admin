@@ -13,7 +13,58 @@
     <div class="left">
         <filter></filter>
     </div>
+   
     <div class="right">
-        <h1 (click)="gotoDetail()">Users List</h1>
+        <h1>Users List</h1>
+        <h3><div class="green">Total : 44 Personell</div></h3>
+        <div class="table-cont">
+            <div class="scrolled-x">
+                <table id="table" class="main-table">
+                    <tr class="main green">
+                        <td class="main-td">SMART MIN</td>
+                        <td class="main-td">SUN MIN</td>
+                        <td class="main-td">First Name</td>
+                        <td class="main-td">Middle Name</td>
+                        <td class="main-td">Last Name</td>
+                        <td class="main-td">Role</td>
+                        <td class="main-td">DSP Type</td>
+                        <td class="main-td">Supervisor</td>
+                    </tr>
+                    <tr class="main gainsboro">
+                        <td class="main-td">8888000001</td>
+                        <td class="main-td">9999000001</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToDetail()">Agnes</a></td>
+                        <td class="main-td">Ganisa</td>
+                        <td class="main-td">Saraswati</td>
+                        <td class="main-td">DSP</td>
+                        <td class="main-td">Internal</td>
+                        <td class="main-td"><a class="underline-link">Diana, Diana</a></td>
+                    </tr>
+                    <tr class="main white-smoke">
+                        <td class="main-td">8888000002</td>
+                        <td class="main-td">9999000002</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToDetail()">Hendrik</a></td>
+                        <td class="main-td">Krisna</td>
+                        <td class="main-td">Suryo</td>
+                        <td class="main-td">DSP</td>
+                        <td class="main-td">Internal</td>
+                        <td class="main-td"><a class="underline-link">Surya, Santoso</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="paging">
+                <ul class="pagination">
+                    <li><a href="">&raquo;</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a class="active" href="">1</a></li>
+                    <li><a href="">&laquo;</a></li>
+                </ul>
+                <div class="clear-fix"></div>
+            </div>
+        </div>
     </div>
-    <div class="clearFix"></div>
+    <div class="clear-fix"></div>
