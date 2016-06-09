@@ -41,8 +41,11 @@ export class UsersComponent {
     
 
     goToDetail(navigation:string) {
-        this._headerService.setNavigationState(navigation);
         this._pageNavigationService.navigate('UserDetail', null, null);
+    }
+    
+    goToDSPRoute(navigation:string) {
+        this._pageNavigationService.navigate('UserRetailerRoute', null, null);
     }
 
     getResize() {
