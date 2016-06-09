@@ -119,6 +119,22 @@ export class LayoutService {
                 leftMenu: false
             };
         }
+        else if (
+            pCurrent === 'UserDetail' ||
+            pCurrent === 'UserInventory' ||
+            pCurrent === 'UserSalesOrder' ||
+            pCurrent === 'UserRetailerRoute' ) {
+
+
+            this._pageNavigationService.resetListPreviousData();
+
+            this.vLayoutState = {
+                appHeader: true,
+                appFooter: false,
+                leftMenu: false,
+            };
+        }
+
         // PARENT PAGE - END
 
         // console.log('In Layout Current Page ' + pCurrent + ' - ' + this.vHeaderItem.back);
@@ -238,6 +254,14 @@ export class LayoutService {
             this.vFilterState.offerid = true;
             this.vFilterState.status = true;
             this.vFilterState.title = true;
+        }
+
+        else if(this.vCurrentPage === 'Users' ||
+                this.vCurrentPage === 'UserDetail') {
+            this.vFilterState.category = true;
+            this.vFilterState.subcategory = true;
+            this.vFilterState.productid = true;
+            this.vFilterState.desc = true;
         }
     }
 }

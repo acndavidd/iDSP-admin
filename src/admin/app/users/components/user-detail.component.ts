@@ -10,7 +10,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
     selector: 'users',
-    templateUrl: './app/users/components/users.component.html',
+    templateUrl: './app/users/components/user-detail.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class UsersComponent {
+export class UserDetailComponent {
     private vDate: Date;
     
     constructor(
@@ -29,9 +29,9 @@ export class UsersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('Users');
+        this._layoutService.setCurrentPage('UserDetail');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Users');
+        this._headerService.setNavigationState('UserDetail');
         this.vDate = new Date();
     }
     
@@ -39,10 +39,9 @@ export class UsersComponent {
         return this.vDate.toLocaleDateString('en-US');
     }
     
-
     gotoDetail(navigation:string) {
         this._headerService.setNavigationState(navigation);
-        this._pageNavigationService.navigate('UserDetail', null, null);
+        this._pageNavigationService.navigate(navigation,null,null);
     }
 
     getResize() {

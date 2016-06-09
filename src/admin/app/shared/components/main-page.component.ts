@@ -11,6 +11,10 @@ import {LoginComponent} from '../../login/components/login.component';
 import {DashboardComponent} from '../../dashboard/components/dashboard.component';
 import {ProductsComponent} from '../../products/components/products.component';
 import {UsersComponent} from '../../users/components/users.component';
+import {UserDetailComponent} from '../../users/components/user-detail.component';
+import {UserInventoryComponent} from '../../users/components/user-inventory.component';
+import {UserSalesTargetComponent} from '../../users/components/user-sales-target.component';
+import {UserRetailerRouteComponent} from '../../users/components/user-retailer-route.component';
 import {RetailersComponent} from '../../retailers/components/retailers.component';
 import {OffersComponent} from '../../offers/components/offers.component';
 import {RemittanceComponent} from '../../dashboard/components/remittance.component';
@@ -57,6 +61,26 @@ import {RemittanceComponent} from '../../dashboard/components/remittance.compone
         path: '/products',
         name: 'Products',
         component: ProductsComponent
+    },
+    {
+        path: '/userDetail',
+        name: 'UserDetail',
+        component: UserDetailComponent
+    },
+    {
+        path: '/userInventory',
+        name: 'UserInventory',
+        component: UserInventoryComponent
+    },
+    {
+        path: '/userSalesTarget',
+        name: 'UserSalesTarget',
+        component: UserSalesTargetComponent
+    },
+    {
+        path: '/userRetailerRoute',
+        name: 'UserRetailerRoute',
+        component: UserRetailerRouteComponent
     },
     {
         path: '/remittance',
