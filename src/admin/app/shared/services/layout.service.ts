@@ -199,12 +199,12 @@ export class LayoutService {
             this.vFilterState.date = true;
             this.vFilterState.retailername = true;
             this.vFilterState.dspname = true;
-        }else if(this.vCurrentPage === 'UsersList') {
+        }else if(this.vCurrentPage === 'Users') {
             this.vFilterState.role = true;
             this.vFilterState.min = true;
             this.vFilterState.name = true;
             this.vFilterState.supervisor = true; 
-        }else if(this.vCurrentPage === 'RetailerList') {
+        }else if(this.vCurrentPage === 'Retailers') {
             this.vFilterState.min = true;
             this.vFilterState.retailername = true;
             this.vFilterState.dspname = true;
