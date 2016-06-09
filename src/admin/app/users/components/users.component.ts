@@ -39,6 +39,7 @@ export class UsersComponent {
         return this.vDate.toLocaleDateString('en-US');
     }
     
+
     gotoDetail(navigation:string) {
         this._headerService.setNavigationState(navigation);
         this._pageNavigationService.navigate('UserDetail', null, null);

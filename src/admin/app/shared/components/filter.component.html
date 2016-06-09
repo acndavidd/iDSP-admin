@@ -1,20 +1,219 @@
-<div class="filterCont">
+<div class="filter-container">
+    <!--date-->
+    <div class="item" *ngIf="getFilterStatus().date">
+        <div class="label">Filter by Date</div>
+        <div class="label">From</div>
+        <div class="value"><input type="date" [(ngModel)]="filter.datefrom" /></div>
+        <div class="label">To</div>
+        <div class="value"><input type="date" [(ngModel)]="filter.dateto" /></div>
+    </div>
+    <!--day-->
+    <div class="item" *ngIf="getFilterStatus().day">
+        <div class="label">Filter by Day</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('day', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+    </div>
+    <!--month-->
+    <div class="item" *ngIf="getFilterStatus().month">
+        <div class="label">Filter by Month</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('month', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+            </select>
+        </div>
+    </div>
+    <!--year-->
+    <div class="item" *ngIf="getFilterStatus().year">
+        <div class="label">Filter by Year</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('year', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">2016</option>
+                <option value="2">2015</option>
+                <option value="3">2014</option>
+            </select>
+        </div>
+    </div>
+    <!--min-->
+    <div class="item" *ngIf="getFilterStatus().min">
+        <div class="label">Search by MIN</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.min" placeholder="Input MIN" /></div>
+    </div>
+    <!--name-->
+    <div class="item" *ngIf="getFilterStatus().name">
+        <div class="label">Search by Name</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.name" placeholder="Input Name" /></div>
+    </div>
+    <!--supervisor-->
+    <div class="item" *ngIf="getFilterStatus().supervisor">
+        <div class="label">Search by Supervisor</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.supervisor" placeholder="Enter Name" /></div>
+    </div>
+    <!--retailer name-->
+    <div class="item" *ngIf="getFilterStatus().retailername">
+        <div class="label">Search by Retailer Name</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.retailername" placeholder="Input Retailer Name" /></div>
+    </div>
+    <!--retailer min-->
+    <div class="item" *ngIf="getFilterStatus().retailermin">
+        <div class="label">Search by Retailer MIN</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.retailermin" placeholder="Input Retailer MIN" /></div>
+    </div>
+    <!--dsp name-->
+    <div class="item" *ngIf="getFilterStatus().dspname">
+        <div class="label">Search by DSP Name</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.dspname" placeholder="Input DSP Name" /></div>
+    </div>
+    <!--dsp min-->
+    <div class="item" *ngIf="getFilterStatus().dspmin">
+        <div class="label">Search by DSP MIN</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.dspmin" placeholder="Input DSP MIN" /></div>
+    </div>
+    <!--amount-->
+    <div class="item" *ngIf="getFilterStatus().amount">
+        <div class="label">Filter Amount</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.amountfrom" placeholder="From" /></div>
+        <div class="value"><input type="text" [(ngModel)]="filter.amountto" placeholder="To" /></div>
+    </div>
+    <!--order number-->
+    <div class="item" *ngIf="getFilterStatus().orderno">
+        <div class="label">Search by Order #</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.orderno" placeholder="Input Order #" /></div>
+    </div>
+    <!--brand-->
+    <div class="item" *ngIf="getFilterStatus().brand">
+        <div class="label">Filter by Brand</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('brand', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Brand 1</option>
+                <option value="2">Brand 2</option>
+                <option value="3">Brand 3</option>
+            </select>
+        </div>
+    </div>
+    <!--outlet type-->
+    <div class="item" *ngIf="getFilterStatus().outlettype">
+        <div class="label">Filter by Outlet Type</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('outlettype', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Type 1</option>
+                <option value="2">Type 2</option>
+                <option value="3">Type 3</option>
+            </select>
+        </div>
+    </div>
+    <!--remittance type-->
+    <div class="item" *ngIf="getFilterStatus().remittancetype">
+        <div class="label">Filter by Remittance Type</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('remittancetype', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Type 1</option>
+                <option value="2">Type 2</option>
+                <option value="3">Type 3</option>
+            </select>
+        </div>
+    </div>
+    <!--role-->
+    <div class="item" *ngIf="getFilterStatus().role">
+        <div class="label">Filter by Role</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('role', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Role 1</option>
+                <option value="2">Role 2</option>
+                <option value="3">Role 3</option>
+            </select>
+        </div>
+    </div>
+    <!--category-->
     <div class="item" *ngIf="getFilterStatus().category">
         <div class="label">Filter by Category</div>
-        <div class="value"><input /></div>
+        <div class="value">
+            <select #val (change)="setFilterValue('category', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+                <option value="3">Category 3</option>
+            </select>
+        </div>
     </div>
+    <!--sub-category-->
     <div class="item" *ngIf="getFilterStatus().subcategory">
         <div class="label">Filter by Sub-Category</div>
-        <div class="value"><input /></div>
+        <div class="value">
+            <select #val (change)="setFilterValue('subcategory', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Sub 1</option>
+                <option value="2">Sub 2</option>
+                <option value="3">Sub 3</option>
+            </select>
+        </div>
     </div>
+    <!--offer id-->
+    <div class="item" *ngIf="getFilterStatus().offerid">
+        <div class="label">Filter by Value</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('offerid', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Offer Id 1</option>
+                <option value="2">Offer Id 2</option>
+                <option value="3">Offer Id 3</option>
+            </select>
+        </div>
+    </div>
+    <!--status-->
+    <div class="item" *ngIf="getFilterStatus().status">
+        <div class="label">Filter by Status</div>
+        <div class="value">
+            <select #val (change)="setFilterValue('status', val.value)">
+                <option value="0" disabled selected>All</option>
+                <!--dummy value-->
+                <option value="1">Expired</option>
+                <option value="2">Active</option>
+            </select>
+        </div>
+    </div>
+    <!--title-->
+    <div class="item" *ngIf="getFilterStatus().title">
+        <div class="label">Search by Title</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.title" placeholder="Input Title" /></div>
+    </div>
+    <!--product id-->
     <div class="item" *ngIf="getFilterStatus().productid">
-        <div class="label">Filter by Product Id</div>
-        <div class="value"><input /></div>
+        <div class="label">Search by Product Id</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.productid" placeholder="Input Name" /></div>
     </div>
+    <!--description-->
     <div class="item" *ngIf="getFilterStatus().desc">
-        <div class="label">Filter by Description</div>
-        <div class="value"><input /></div>
+        <div class="label">Search by Description</div>
+        <div class="value"><input type="text" [(ngModel)]="filter.desc" placeholder="Enter Description" /></div>
     </div>
-    <div class="button">GO</div>
-    <div class="button">RESET</div>
+    <!--button-->
+    <div class="button-cont">
+        <div class="button">GO</div>
+        <div class="button reset">RESET</div>
+        <div class="clear-fix"></div>
+    </div>
 </div>
