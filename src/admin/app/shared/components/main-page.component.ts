@@ -18,6 +18,7 @@ import {UserRetailerRouteComponent} from '../../users/components/user-retailer-r
 import {RetailersComponent} from '../../retailers/components/retailers.component';
 import {OffersComponent} from '../../offers/components/offers.component';
 import {RemittanceComponent} from '../../dashboard/components/remittance.component';
+import {LayoutUserComponent} from '../../users/components/layout-user.component';
 
 @Component({
     selector : 'main-page',
@@ -43,13 +44,13 @@ import {RemittanceComponent} from '../../dashboard/components/remittance.compone
         component: DashboardComponent
     },
     {
-        path: '/users',
-        name: 'Users',
+        path: '/usersList',
+        name: 'UsersList',
         component: UsersComponent
     },
     {
-        path: '/retailers',
-        name: 'Retailers',
+        path: '/retailersList',
+        name: 'RetailersList',
         component: RetailersComponent
     },
     {
@@ -82,11 +83,19 @@ import {RemittanceComponent} from '../../dashboard/components/remittance.compone
         name: 'UserRetailerRoute',
         component: UserRetailerRouteComponent
     },
+    // Dashboard
     {
         path: '/remittance',
         name: 'Remittance',
         component: RemittanceComponent
+    },
+    // Users
+    {
+        path: 'users/...',
+        name: 'Users',
+        component: LayoutUserComponent
     }
+
 ])
 
 export class MainPageComponent {

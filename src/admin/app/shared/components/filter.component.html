@@ -211,7 +211,7 @@
         <div class="value"><input type="text" [(ngModel)]="filter.desc" placeholder="Enter Description" /></div>
     </div>
     <!--button-->
-    <div class="button-cont">
+    <div class="button-cont" *ngIf="getFilterStatus().button">
         <div class="button">GO</div>
         <div class="button reset">RESET</div>
         <div class="clear-fix"></div>

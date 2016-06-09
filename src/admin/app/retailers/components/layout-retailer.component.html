@@ -1,0 +1,25 @@
+<div class="general-container">
+    <div class="info-cont">
+        <div class="inner-info navigation">
+            Users >> Users List
+        </div>
+        <div class="inner-info date">
+            {{getToday()}}
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <div class="clear-fix"></div>
+    <div class="left">
+        <div class="left-menu-cont">
+            <div class="left-menu-item vivid-pink">User Detail</div>
+            <div class="left-menu-item">User Inventory</div>
+            <div class="left-menu-item">User Sales Target</div>
+            <div class="left-menu-item">User Retailer Route</div>
+        </div>
+        <filter></filter>
+    </div>
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="clear-fix"></div>
+</div>

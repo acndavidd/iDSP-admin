@@ -29,9 +29,8 @@ export class UsersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('Users');
+        this._layoutService.setCurrentPage('UsersList');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Users');
         this.vDate = new Date();
     }
     
@@ -41,8 +40,8 @@ export class UsersComponent {
     
 
     gotoDetail(navigation:string) {
-        this._headerService.setNavigationState(navigation);
-        this._pageNavigationService.navigate('UserDetail', null, null);
+        // this._headerService.setNavigationState(navigation);
+        // this._pageNavigationService.navigate('UserDetail2', null, null);
     }
 
     getResize() {

@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {Router, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Router, ROUTER_DIRECTIVES, RouteConfig} from 'angular2/router';
 import {Layout} from '../../../models/layout';
 import {LayoutService} from '../../shared/services/layout.service';
 import {PageNavigationService} from '../../shared/services/page-navigation.service';
@@ -7,10 +7,11 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
+import {UserDetailComponent} from './user-detail.component';
 
 @Component({
-    selector: 'retailers',
-    templateUrl: './app/retailers/components/retailers.component.html',
+    selector: 'layout-user',
+    templateUrl: './app/users/components/layout-user.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +20,16 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class RetailersComponent {
+@RouteConfig([
+    {
+        path: '/userDetail2',
+        name: 'UserDetail2',
+        component: UserDetailComponent,
+        useAsDefault: true
+    }
+])
+
+export class LayoutUserComponent {
     private vDate: Date;
     
     constructor(
@@ -29,8 +39,9 @@ export class RetailersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('RetailersList');
+        this._layoutService.setCurrentPage('UsersDetail');
         this._headerService.setTitle('iDSP Administration Panel');
+        // this._headerService.setNavigationState('Products');
         this.vDate = new Date();
     }
     
