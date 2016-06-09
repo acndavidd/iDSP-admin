@@ -1,0 +1,20 @@
+<div class="filterCont">
+    <div class="item" *ngIf="getFilterStatus().category">
+        <div class="label">Filter by Category</div>
+        <div class="value"><input /></div>
+    </div>
+    <div class="item" *ngIf="getFilterStatus().subcategory">
+        <div class="label">Filter by Sub-Category</div>
+        <div class="value"><input /></div>
+    </div>
+    <div class="item" *ngIf="getFilterStatus().productid">
+        <div class="label">Filter by Product Id</div>
+        <div class="value"><input /></div>
+    </div>
+    <div class="item" *ngIf="getFilterStatus().desc">
+        <div class="label">Filter by Description</div>
+        <div class="value"><input /></div>
+    </div>
+    <div class="button">GO</div>
+    <div class="button">RESET</div>
+</div>

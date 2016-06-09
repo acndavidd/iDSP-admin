@@ -10,6 +10,12 @@ import {LoginComponent} from '../../login/components/login.component';
 // import {HomeComponent} from '../../shared/components/home.component';
 import {DashboardComponent} from '../../dashboard/components/dashboard.component';
 import {ProductsComponent} from '../../products/components/products.component';
+import {UsersComponent} from '../../users/components/users.component';
+import {UserDetailComponent} from '../../users/components/user-detail.component';
+import {UserInventoryComponent} from '../../users/components/user-inventory.component';
+import {UserSalesTargetComponent} from '../../users/components/user-sales-target.component';
+import {UserRetailerRouteComponent} from '../../users/components/user-retailer-route.component';
+
 
 @Component({
     selector : 'main-page',
@@ -38,7 +44,33 @@ import {ProductsComponent} from '../../products/components/products.component';
         path: '/products',
         name: 'Products',
         component: ProductsComponent
-    }
+    },
+    {
+        path: '/users',
+        name: 'Users',
+        component: UsersComponent
+    },
+    {
+        path: '/userDetail',
+        name: 'UserDetail',
+        component: UserDetailComponent
+    },
+    {
+        path: '/userInventory',
+        name: 'UserInventory',
+        component: UserInventoryComponent
+    },
+    {
+        path: '/userSalesTarget',
+        name: 'UserSalesTarget',
+        component: UserSalesTargetComponent
+    },
+    {
+        path: '/userRetailerRoute',
+        name: 'UserRetailerRoute',
+        component: UserRetailerRouteComponent
+    },
+    
 ])
 
 export class MainPageComponent {

@@ -39,6 +39,26 @@ START WEB ADMIN
         width: calc(80% - 20px);
         margin-left: 20px;
     }
+
+    table.detail-content {
+        width: 100%;
+        min-width: 300px;
+    }
+    tr {
+        height:30px;
+    }
+    td.detail-caption {
+        width: 15%;
+        min-width: 100px;
+    }
+    td.detail-content {
+        width: 80%;
+        min-width: 100px;
+    }    
+    td.separator{
+        width: 5%;
+        min-width: 10px;
+    }  
 }
 
 .clearFix{
