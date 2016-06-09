@@ -29,9 +29,8 @@ export class UserRetailerRouteComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UserRetailerRoute');
+        this._layoutService.setCurrentPage('UsersRetailerRoute');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('UserRetailerRoute');
         this.vDate = new Date();
     }
     

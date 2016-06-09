@@ -8,8 +8,8 @@ export class HeaderService {
     
     navState = {
         Dashboard: false,
-        Users: false,
-        Retailers: false,
+        UsersList: false,
+        RetailersList: false,
         Offers: false,
         Products: false
     };
