@@ -25,7 +25,12 @@ h3{
 //LINK
 a{
     color: $vivid-pink;
+
+    &.underline-link{
+        text-decoration:underline;
+    }
 }
+
 
 //PAGINATION
 
@@ -54,37 +59,6 @@ a{
 
     }
         
-
-//TABLE
-table{
-    text-align:center;
-    border: 1px solid $white;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td{
-    min-width: 150px;
-    height: 40px;
-    border: 1px solid $white;
-}
-
-tr{
-    border: 1px solid $white;
-    &.green { 
-        background-color:$apple;
-        color:white;
-        font-weight: bold;
-    }
-    &.gainsboro { 
-        background-color: $gainsboro; 
-        color:black;
-    }
-    &.white-smoke { 
-        background-color: $white-smoke; 
-        color:black;
-    }
-}
 
 
 .general-container{
@@ -136,31 +110,98 @@ tr{
             }
         }
 
+        .scrolled-x{
+            width: 100%;
+            overflow-x:auto;
+        }
+
         .table-cont{
             width: 100%;
-            overflow-x: auto;
         }
     }
 
-    table.detail-content {
-        width: 100%;
-        min-width: 300px;
+
+
+//TABLE
+    table{
+
+        &.main-table{
+            width: 100%;
+            text-align:center;
+            border: 1px solid $white;
+            border-collapse: collapse;
+        }
+        &.detail-table {
+            width: 100%;
+            min-width: 300px;
+        }
     }
-    tr {
-        height:30px;
-    }
-    td.detail-caption {
+
+    td {
+        &.main-td {
+        min-width: 150px;
+        height: 40px;
+        border: 1px solid $white;
+        }
+
+        &.detail-capt-td {
         width: 15%;
         min-width: 100px;
-    }
-    td.detail-content {
+        }
+
+        &.detail-content-td {
         width: 80%;
         min-width: 100px;
-    }    
-    td.separator{
+        } 
+
+        &.detail-colon-td{
         width: 5%;
         min-width: 10px;
-    }  
+        }  
+    }
+
+    tr{
+       &.main{
+            border: 1px solid $white;
+            &.green { 
+                background-color:$apple;
+                color:white;
+                font-weight: bold;
+            }
+            &.gainsboro { 
+                background-color: $gainsboro; 
+                color:black;
+            }
+            &.white-smoke { 
+                background-color: $white-smoke; 
+                color:black;
+            }
+        }
+        &.detail-tr {
+            height:30px;
+        }
+    }
+
+
+    // table.detail-content {
+    //     width: 100%;
+    //     min-width: 300px;
+    // }
+    // tr {
+    //     height:30px;
+    // }
+    // td.detail-caption {
+    //     width: 15%;
+    //     min-width: 100px;
+    // }
+    // td.detail-content {
+    //     width: 80%;
+    //     min-width: 100px;
+    // }    
+    // td.separator{
+    //     width: 5%;
+    //     min-width: 10px;
+    // }  
 }
 
 // button
