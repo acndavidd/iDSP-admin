@@ -7,6 +7,8 @@
     top: 0;
     left: 0;
     right: 0;
+    min-width:1024px;
+    overflow:auto;
     
     .main-box{
       background-color: $apple;
@@ -78,6 +80,12 @@
             color: $white;
           }
           
+        }
+        .item:hover{
+          background-color: $white-smoke;
+        }
+        .item:active{
+          background-color: $sulu;
         }
         
         .separator{

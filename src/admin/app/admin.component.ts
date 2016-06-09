@@ -42,7 +42,7 @@ declare var configChannel: any;
             <admin-header></admin-header>
             <my-modal></my-modal>
             <left-menu></left-menu>
-            <div class="bodyContainer">
+            <div class="body-container">
                 <router-outlet></router-outlet>
             </div>
             <idsp-footer-menu></idsp-footer-menu>

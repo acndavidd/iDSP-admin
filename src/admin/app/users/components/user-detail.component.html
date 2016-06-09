@@ -1,105 +1,85 @@
-<div class="general-container">
-    <div class="info-cont">
-        <div class="inner-info navigation">
-            Users >> User Detail
-        </div>
-        <div class="inner-info date">
-            {{getToday()}}
-        </div>
-        <div class="clear-fix"></div>
-    </div>
-    <div class="clear-fix"></div>
-    <div class="left">
-        <filter></filter>
-    </div>
-    <div class="right">
-        <h1 (click)="gotoDetail()">Agnes Ganisa Saraswati Profile</h1>        
-        <div class="content">
-
-            <table class="detail-table">
-                <tr class="detail-tr">
-                    <td class="detail-capt-td">First Name</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Agnes</td>
-                </tr>
-                <tr class="detail-tr">
-                    <td class="detail-capt-td">Middle Name</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Ganisa</td>
-                </tr>
-                <tr class="detail-tr">
-                    <td class="detail-capt-td">Last Name</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Saraswati</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Role</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">DSP</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Supervisor</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td"><a class="underline-link">Diana, Diana</a></td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">No of Retailers</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td"><a class="underline-link">10</a></td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Birthdate</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">12 April 1994</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Gender</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Female</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Civil Status</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Single</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Address</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Makati City, Phillipines</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Civil Status</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Single</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Address</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">Makati City, Phillipines</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Contact Number</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">+63-918xxxx</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Email Address</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">agnes.saraswati@yahoo.com</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Smart MIN</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">8888000001</td>
-                </tr>
-                 <tr class="detail-tr">
-                    <td class="detail-capt-td">Sun MIN</td>
-                    <td class="detail-colon-td">:</td>
-                    <td class="detail-content-td">9999000001</td>
-                </tr>
-            </table>
-
-        </div>
-    </div>
-    <div class="clear-fix"></div>
+<div class="content">
+    <h1>Agnes Ganisa Saraswati Profile</h1>      
+    <table class="detail-table">
+        <tr class="detail-tr">
+            <td class="detail-capt-td">First Name</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Agnes</td>
+        </tr>
+        <tr class="detail-tr">
+            <td class="detail-capt-td">Middle Name</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Ganisa</td>
+        </tr>
+        <tr class="detail-tr">
+            <td class="detail-capt-td">Last Name</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Saraswati</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Role</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">DSP</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Supervisor</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td"><a class="underline-link">Diana, Diana</a></td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">No of Retailers</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td"><a class="underline-link">10</a></td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Birthdate</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">12 April 1994</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Gender</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Female</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Civil Status</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Single</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Address</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Makati City, Phillipines</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Civil Status</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Single</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Address</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">Makati City, Phillipines</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Contact Number</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">+63-918xxxx</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Email Address</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">agnes.saraswati@yahoo.com</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Smart MIN</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">8888000001</td>
+        </tr>
+         <tr class="detail-tr">
+            <td class="detail-capt-td">Sun MIN</td>
+            <td class="detail-colon-td">:</td>
+            <td class="detail-content-td">9999000001</td>
+        </tr>
+    </table>
 </div>

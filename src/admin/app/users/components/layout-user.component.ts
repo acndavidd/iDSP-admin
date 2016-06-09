@@ -11,6 +11,7 @@ import {UserDetailComponent} from './user-detail.component';
 import {UserInventoryComponent} from './user-inventory.component';
 import {UserRetailerRouteComponent} from './user-retailer-route.component';
 import {UserSalesTargetComponent} from './user-sales-target.component';
+import {LeftMenuComponent} from '../../shared/components/left-menu.component';
 
 @Component({
     selector: 'layout-user',
@@ -19,7 +20,8 @@ import {UserSalesTargetComponent} from './user-sales-target.component';
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
-        FilterComponent
+        FilterComponent,
+        LeftMenuComponent
     ],
 })
 
