@@ -8,6 +8,7 @@ import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 import {RetailerDetailComponent} from './retailer-detail.component';
+import {RetailersCollectionComponent} from './retailers-collection.component';
 
 @Component({
     selector: 'layout-retailer',
@@ -22,10 +23,15 @@ import {RetailerDetailComponent} from './retailer-detail.component';
 
 @RouteConfig([
     {
-        path: '/retailerDetail',
+        path: '../retailerDetail',
         name: 'RetailerDetail',
         component: RetailerDetailComponent,
         useAsDefault: true
+    },
+    {
+        path: '../retailersCollection',
+        name: 'RetailersCollection',
+        component: RetailersCollectionComponent
     }
 ])
 

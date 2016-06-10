@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'retailers',
-    templateUrl: './app/retailers/components/retailers.component.html',
+    selector: 'retailers-collection',
+    templateUrl: './app/retailers/components/retailers-collection.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class RetailersComponent {
+export class RetailersCollectionComponent {
     private vDate: Date;
     
     constructor(
@@ -29,7 +29,7 @@ export class RetailersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('RetailersList');
+        this._layoutService.setCurrentPage('RetailersCollection');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }
@@ -42,11 +42,4 @@ export class RetailersComponent {
         return this._matchMediaService.getMm();
     }
 
-    goToDetail(name:string) {
-        this._pageNavigationService.navigate('Retailers', null, null);
-    }
-
-    goToDetailDSP(name:string) {
-        this._pageNavigationService.navigate('Users/UserDetail', null, null);
-    }
 }
