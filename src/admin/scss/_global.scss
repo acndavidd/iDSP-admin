@@ -23,9 +23,18 @@ h3{
     -webkit-margin-after: 0.5em;
 }
 
+.sub-title{
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.2em;
+    padding: 0.8rem;
+}
+
 //COLOR
 .green { color: $apple; }
 .vivid-pink { color: $vivid-pink; }
+
+//BACKGROUND COLOR
+&.light-grey        { background-color: $whisper; }
 
 //LINK
 a{
@@ -48,14 +57,15 @@ select{
     height: 27px;
     border-radius: 4px;    
     border: 1px solid $grey-border;
+    padding: 0 7px;     
 }
 
 input{
-    width: 167px;
+    width: 158px;
     height: 27px;
     border-radius: 4px;
     border-style: ridge;
-    padding: 0 3px;                
+    padding: 0 7px;                
     border: 1px solid $grey-border;
 }
 
@@ -200,6 +210,16 @@ select:focus{
                     float: right;
                 }
             }
+
+            .icon{
+                float: left;
+            }
+
+            .large{
+                float: left;
+                padding: 6px;
+                font-size: $large-text;
+            }
         }
 
         .scrolled-x{
@@ -209,6 +229,37 @@ select:focus{
 
         .table-cont{
             width: 100%;
+        }
+    }
+
+    //TAB INNER
+
+    .tab-cont{
+        width:100%;
+        margin-bottom:20px;
+
+        .tab-item{
+            width:calc(50% - 16px);
+            padding:5px;
+            border: 3px solid $leaf;
+            border-right-width: 0;
+            float:left;
+            text-align:center;
+            cursor:pointer;
+
+            &.active{
+            background-color:$leaf;
+            color:$white;
+            }
+        }
+
+        .tab-item:last-child {
+            border-right-width: 3px;
+        }
+
+        .tab-item:hover{
+            background-color:$leaf;
+            color:$white;
         }
     }
 
@@ -296,6 +347,15 @@ select:focus{
     // }  
 }
 
+// icon
+
+.icon{
+    background: url('../img/icon-idsp-2/setting-grey.png')no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
 
 .clear-fix{
     clear: both;
@@ -437,7 +497,6 @@ END OF CHECKBOX
 &.green             { color: $apple; }
 &.deep-cyan         { color: $deep-cyan; }
 &.red               { color: $red; }
-
 
 /*
 ===========================================================

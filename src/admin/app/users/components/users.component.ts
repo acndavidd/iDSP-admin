@@ -30,6 +30,7 @@ export class UsersComponent {
         private _headerService: HeaderService
     ) {
         this._layoutService.setCurrentPage('UsersList');
+        this._headerService.setNavigationState('UsersList');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }

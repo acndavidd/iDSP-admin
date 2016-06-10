@@ -45,6 +45,7 @@ export class LayoutRetailerComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
+        window.scrollTo(0,0);
         this._layoutService.setCurrentPage('UsersDetail');
         this._headerService.setTitle('iDSP Administration Panel');
         // this._headerService.setNavigationState('Products');

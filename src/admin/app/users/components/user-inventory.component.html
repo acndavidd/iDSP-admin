@@ -1,3 +1,113 @@
 <div class="content">
-    <h1>User Inventory</h1>
+    <h1>Agnes Saraswati Inventory</h1>
+    <br>
+    <div class="tab-cont">
+    	<div class="tab-item" (click)="showTabLoad()" [ngClass] = "{active: vLoadActive}">Load</div>
+    	<div class="tab-item" (click)="showTabPhysical()" [ngClass] = "{active: vPhysicalActive}">Physical</div>
+    </div>
+    <br>
+    <br>
+    <div class="table-cont">
+    	<div class="tab-content" *ngIf="vLoadShow">
+	        <div class="scrolled-x">
+	            <table id="table" class="main-table">
+	                <tr class="main green">
+	                    <td class="main-td">Brand</td>
+	                    <td class="main-td">Product Name</td>
+	                    <td class="main-td">Beginning Balance</td>
+	                    <td class="main-td">Delivery</td>
+	                    <td class="main-td">Sold</td>
+	                    <td class="main-td">Ending Balance</td>
+	                    <td class="main-td">Current Balance</td>
+	                    <td class="main-td">For Validate</td>
+	                </tr>
+	                <tr class="main gainsboro">
+	                    <td class="main-td">SMART</td>
+	                    <td class="main-td">SmartLoad</td>
+	                    <td class="main-td">500</td>
+	                    <td class="main-td">100</td>
+	                    <td class="main-td">200</td>
+	                    <td class="main-td">400</td>
+	                    <td class="main-td">500</td>
+	                    <td class="main-td">100</td>
+	                </tr>
+	                <tr class="main white-smoke">
+	                    <td class="main-td">SUN</td>
+	                    <td class="main-td">ExpressLoad</td>
+	                    <td class="main-td">600</td>
+	                    <td class="main-td">50</td>
+	                    <td class="main-td">200</td>
+	                    <td class="main-td">450</td>
+	                    <td class="main-td">600</td>
+	                    <td class="main-td">150</td>
+	                </tr>
+	            </table>            
+	        </div>
+	        <div class="paging">
+	            <ul class="pagination">
+	                <li><a href="">&raquo;</a></li>
+	                <li><a href="">6</a></li>
+	                <li><a href="">5</a></li>
+	                <li><a href="">4</a></li>
+	                <li><a href="">3</a></li>
+	                <li><a href="">2</a></li>
+	                <li><a class="active" href="">1</a></li>
+	                <li><a href="">&laquo;</a></li>
+	            </ul>
+	            <div class="clear-fix"></div>
+	        </div>
+	    </div>
+	    <div class="tab-content"  *ngIf="vPhysicalShow">
+	        <div class="scrolled-x">
+	            <table id="table" class="main-table">
+	                <tr class="main green">
+	                    <td class="main-td">Brand</td>
+	                    <td class="main-td">Category</td>
+	                    <td class="main-td">Sub Category</td>
+	                    <td class="main-td">Product ID</td>
+	                    <td class="main-td">Beginning Balance</td>
+	                    <td class="main-td">New Delivery</td>
+	                    <td class="main-td">Sold</td>
+	                    <td class="main-td">Transfer Back</td>
+	                    <td class="main-td">Ending Balance</td>
+	                </tr>
+	                <tr class="main gainsboro">
+	                    <td class="main-td">SMART</td>
+	                    <td class="main-td">SIM</td>
+	                    <td class="main-td">SMART SIM</td>
+	                    <td class="main-td">SKU1</td>
+	                    <td class="main-td">500</td>
+	                    <td class="main-td">100</td>
+	                    <td class="main-td">200</td>
+	                    <td class="main-td">50</td>
+	                    <td class="main-td">350</td>
+	                </tr>
+	                <tr class="main white-smoke">
+	                    <td class="main-td">SUN</td>
+	                    <td class="main-td">SIM</td>
+	                    <td class="main-td">Special SIM</td>
+	                    <td class="main-td">SKU2</td>
+	                    <td class="main-td">600</td>
+	                    <td class="main-td">50</td>
+	                    <td class="main-td">120</td>
+	                    <td class="main-td">180</td>
+	                    <td class="main-td">350</td>
+	                </tr>
+	            </table>            
+	        </div>
+	        <div class="paging">
+	            <ul class="pagination">
+	                <li><a href="">&raquo;</a></li>
+	                <li><a href="">6</a></li>
+	                <li><a href="">5</a></li>
+	                <li><a href="">4</a></li>
+	                <li><a href="">3</a></li>
+	                <li><a href="">2</a></li>
+	                <li><a class="active" href="">1</a></li>
+	                <li><a href="">&laquo;</a></li>
+	            </ul>
+	            <div class="clear-fix"></div>
+	        </div>
+        </div>
+	</div>
 </div>

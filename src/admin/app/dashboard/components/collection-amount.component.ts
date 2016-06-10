@@ -6,18 +6,20 @@ import {PageNavigationService} from '../../shared/services/page-navigation.servi
 import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
+import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'dashboard',
-    templateUrl: './app/dashboard/components/dashboard.component.html',
+    selector: 'collection-amount',
+    templateUrl: './app/dashboard/components/collection-amount.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
-        ROUTER_DIRECTIVES
+        ROUTER_DIRECTIVES,
+        FilterComponent
     ],
 })
 
-export class DashboardComponent {
+export class CollectionAmountComponent {
     private vDate: Date;
     
     constructor(
@@ -28,9 +30,8 @@ export class DashboardComponent {
         private _headerService: HeaderService
     ) {
         window.scrollTo(0,0);
-        this._layoutService.setCurrentPage('Dashboard');
+        this._layoutService.setCurrentPage('CollectionAmount');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Dashboard');
         this.vDate = new Date();
     }
     
@@ -42,7 +43,7 @@ export class DashboardComponent {
         return this._matchMediaService.getMm();
     }
 
-    goTo(page:string) {
-        this._pageNavigationService.navigate(page, null, null);
+    goTo(orderno:string) {
+        this._pageNavigationService.navigate('OrderDetail', null, null);
     }
 }
