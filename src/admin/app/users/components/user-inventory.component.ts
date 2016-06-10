@@ -20,6 +20,10 @@ import {FilterComponent} from '../../shared/components/filter.component';
 })
 
 export class UserInventoryComponent {
+    vLoadShow = true;
+    vPhysicalShow = false;
+    vLoadActive = true;
+    vPhysicalActive = false;
     private vDate: Date;
     
     constructor(
@@ -46,4 +50,21 @@ export class UserInventoryComponent {
     getResize() {
         return this._matchMediaService.getMm();
     }
+
+    showTabLoad() {
+        this.vLoadShow = true;
+        this.vPhysicalShow = false;
+        this.vLoadActive = true;
+        this.vPhysicalActive = false;
+        this._layoutService.setLoadFilterShow(true);
+    }
+
+    showTabPhysical() {
+        this.vLoadShow = false;
+        this.vPhysicalShow = true;
+        this.vLoadActive = false;
+        this.vPhysicalActive = true;
+        this._layoutService.setLoadFilterShow(false);
+    }
+
 }

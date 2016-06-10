@@ -82,10 +82,12 @@
           
         }
         .item:hover{
-          background-color: $white-smoke;
+          background-color: $sulu;
+          color: $white;
         }
         .item:active{
           background-color: $sulu;
+          color: $white;
         }
         
         .separator{
