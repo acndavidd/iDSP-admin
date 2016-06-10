@@ -62,7 +62,7 @@ export class HeaderComponent implements OnInit {
         this._pageNavigationService.navigate('AdminProfile', null, null);
     }
 
-    goToLoginPage() {
-        this._pageNavigationService.navigate('Login', null, null);
-    }
+    // goToLoginPage() {
+    //     this._pageNavigationService.navigate('Login', null, null);
+    // }
 }

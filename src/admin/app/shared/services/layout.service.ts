@@ -54,7 +54,26 @@ export class LayoutService {
     //     loadshow :false,
     // };
 
-    setLoadFilterShow(pFilterShow:boolean) {
+    setUserInventoryFilter(pFilterShow:boolean) {
+        // this.vTabState.loadshow = pFilterShow;
+        // if(this.vTabState.loadshow === true) {
+        if(pFilterShow === true) {
+                this.vFilterState.brand = false;
+                this.vFilterState.category = false;
+                this.vFilterState.subcategory = false;
+                this.vFilterState.productid = false;
+                this.vFilterState.button = false;
+        }
+        else {
+            this.vFilterState.brand = true;
+            this.vFilterState.category = true;
+            this.vFilterState.subcategory = true;
+            this.vFilterState.productid = true;
+            this.vFilterState.button = true;
+        } 
+    }
+
+    setRetailerInventoryFilter(pFilterShow:boolean) {
         // this.vTabState.loadshow = pFilterShow;
         // if(this.vTabState.loadshow === true) {
         if(pFilterShow === true) {

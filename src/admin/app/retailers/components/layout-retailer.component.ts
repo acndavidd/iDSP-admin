@@ -10,6 +10,8 @@ import {FilterComponent} from '../../shared/components/filter.component';
 import {RetailerDetailComponent} from './retailer-detail.component';
 import {RetailerCollectionComponent} from './retailer-collection.component';
 import {RetailerFrequencyComponent} from './retailer-frequency.component';
+import {RetailerInventoryComponent} from './retailer-inventory.component';
+
 
 @Component({
     selector: 'layout-retailer',
@@ -33,6 +35,11 @@ import {RetailerFrequencyComponent} from './retailer-frequency.component';
         path: '../retailersCollection',
         name: 'RetailerCollection',
         component: RetailerCollectionComponent
+    },
+    {
+        path: '/retailerInventory',
+        name: 'RetailerInventory',
+        component: RetailerInventoryComponent
     },
     {
         path: '/retailerFrequency',

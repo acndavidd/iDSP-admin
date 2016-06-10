@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'users',
-    templateUrl: './app/users/components/user-inventory.component.html',
+    selector: 'retailer-inventory',
+    templateUrl: './app/retailers/components/retailer-inventory.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class UserInventoryComponent {
+export class RetailerInventoryComponent {
     vLoadShow = true;
     vPhysicalShow = false;
     vLoadActive = true;
@@ -33,7 +33,7 @@ export class UserInventoryComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UsersInventory');
+        this._layoutService.setCurrentPage('RetailerInventory');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }
@@ -56,7 +56,7 @@ export class UserInventoryComponent {
         this.vPhysicalShow = false;
         this.vLoadActive = true;
         this.vPhysicalActive = false;
-        this._layoutService.setUserInventoryFilter(true);
+        this._layoutService.setRetailerInventoryFilter(true);
     }
 
     showTabPhysical() {
@@ -64,7 +64,7 @@ export class UserInventoryComponent {
         this.vPhysicalShow = true;
         this.vLoadActive = false;
         this.vPhysicalActive = true;
-        this._layoutService.setUserInventoryFilter(false);
+        this._layoutService.setRetailerInventoryFilter(false);
     }
 
 }
