@@ -24,6 +24,7 @@ import {VisitedRetailerComponent} from '../../dashboard/components/visited-retai
 import {UnservedOrderComponent} from '../../dashboard/components/unserved-order.component';
 import {SalesOrderComponent} from '../../dashboard/components/sales-order.component';
 import {OrderDetailComponent} from '../../dashboard/components/order-detail.component';
+import {AdminProfileComponent} from '../../admin/components/admin-profile.component';
 
 @Component({
     selector : 'main-page',
@@ -36,9 +37,9 @@ import {OrderDetailComponent} from '../../dashboard/components/order-detail.comp
 @RouteConfig([
     // PARENT PAGE - START
     // {
-    //     path: '/home',
-    //     name: 'Home',
-    //     component: HomeComponent
+    //     path: '/login',
+    //     name: 'Login',
+    //     component: LoginComponent
     // },
     // PARENT PAGE - END
     
@@ -67,6 +68,11 @@ import {OrderDetailComponent} from '../../dashboard/components/order-detail.comp
         path: '/products',
         name: 'Products',
         component: ProductsComponent
+    },
+    {
+        path: '/adminProfile',
+        name: 'AdminProfile',
+        component: AdminProfileComponent
     },
     // Dashboard
     {
@@ -119,6 +125,7 @@ export class MainPageComponent {
     constructor (
         private _layoutService: LayoutService,
         private _matchMediaService: MatchMediaService) {}
+
 
     getResize() {
         return this._matchMediaService.getMm();

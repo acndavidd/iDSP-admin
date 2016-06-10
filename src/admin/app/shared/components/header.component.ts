@@ -57,4 +57,12 @@ export class HeaderComponent implements OnInit {
     getNavigationState() {
         return this._headerService.getNavigationState();
     }
+
+    goToAdminProfile() {
+        this._pageNavigationService.navigate('AdminProfile', null, null);
+    }
+
+    goToLoginPage() {
+        this._pageNavigationService.navigate('Login', null, null);
+    }
 }

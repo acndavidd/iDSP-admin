@@ -110,7 +110,8 @@ export class LayoutService {
             pCurrent === 'Users' ||
             pCurrent === 'Retailers' ||
             pCurrent === 'Offers' ||
-            pCurrent === 'Products') {
+            pCurrent === 'Products' ||
+            pCurrent === 'AdminProfile') {
 
             this._pageNavigationService.resetListPreviousData();
 
@@ -118,21 +119,6 @@ export class LayoutService {
                 appHeader: true,
                 appFooter: false,
                 leftMenu: false
-            };
-        }
-        else if (
-            pCurrent === 'UserDetail' ||
-            pCurrent === 'UserInventory' ||
-            pCurrent === 'UserSalesOrder' ||
-            pCurrent === 'UserRetailerRoute' ) {
-
-
-            this._pageNavigationService.resetListPreviousData();
-
-            this.vLayoutState = {
-                appHeader: true,
-                appFooter: false,
-                leftMenu: false,
             };
         }
 
@@ -165,12 +151,6 @@ export class LayoutService {
     getCurrentPointer() {
         return this.vCurrentPointer;
     }
-    // for hardcode
-    // toggleAdd() {
-    //     if (this.vCurrentPage === 'BasicCallProcedure') {
-    //         this._pageNavigationService.navigate('BCPAddRetailerRoute', null, null);
-    //     }
-    // }
 
     // for backend
         toggleAdd() {
