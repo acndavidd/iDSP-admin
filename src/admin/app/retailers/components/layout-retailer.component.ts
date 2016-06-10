@@ -7,10 +7,10 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
-// import {UserDetailComponent} from './user-detail.component';
+import {RetailerDetailComponent} from './retailer-detail.component';
 
 @Component({
-    selector: 'retailer-detail',
+    selector: 'layout-retailer',
     templateUrl: './app/retailers/components/layout-retailer.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
@@ -20,16 +20,16 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-// @RouteConfig([
-//     {
-//         path: '/userDetail2',
-//         name: 'UserDetail2',
-//         component: UserDetailComponent,
-//         useAsDefault: true
-//     }
-// ])
+@RouteConfig([
+    {
+        path: '/retailerDetail',
+        name: 'RetailerDetail',
+        component: RetailerDetailComponent,
+        useAsDefault: true
+    }
+])
 
-export class LayoutUserDetailComponent {
+export class LayoutRetailerComponent {
     private vDate: Date;
     
     constructor(

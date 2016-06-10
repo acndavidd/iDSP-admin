@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'retailers',
-    templateUrl: './app/retailers/components/retailers.component.html',
+    selector: 'unserved-order',
+    templateUrl: './app/dashboard/components/unserved-order.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class RetailersComponent {
+export class UnservedOrderComponent {
     private vDate: Date;
     
     constructor(
@@ -29,7 +29,8 @@ export class RetailersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('RetailersList');
+        window.scrollTo(0,0);
+        this._layoutService.setCurrentPage('UnservedOrder');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }
@@ -40,9 +41,5 @@ export class RetailersComponent {
     
     getResize() {
         return this._matchMediaService.getMm();
-    }
-
-    goToDetail(name:string) {
-        this._pageNavigationService.navigate('Retailers', null, null);
     }
 }

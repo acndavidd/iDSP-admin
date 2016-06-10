@@ -4,7 +4,7 @@
     <div class="dashboard-content">
         <h1 class="title">My Dashboard</h1>
         <div class="tiles">
-            <div class="tile purple">
+            <div class="tile purple" (click)="goTo('SalesOrder')">
                 <div class="left">
                     <div class="inner-left">
                         <div class="value">P</div>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile red">
+            <div class="tile red" (click)="goTo('UnservedOrder')">
                 <div class="left">
                     <div class="inner-left">
                         <div class="value">P</div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile yellow">
+            <div class="tile yellow" (click)="goTo('AccountReceivable')">
                 <div class="left">
                     <div class="inner-left">
                         <div class="value">P</div>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile orange">
+            <div class="tile orange" (click)="goTo('VisitedRetailer')">
                 <div class="left">
                     <div class="inner-left">
                         <div class="value">P</div>

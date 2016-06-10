@@ -7,7 +7,6 @@ import {SettingsComponent} from '../../settings/components/settings.component';
 import {ResetPasswordComponent} from '../../settings/components/reset-password.component';
 import {MpinComponent} from '../../login/components/mpin.component';
 import {LoginComponent} from '../../login/components/login.component';
-// import {HomeComponent} from '../../shared/components/home.component';
 import {DashboardComponent} from '../../dashboard/components/dashboard.component';
 import {ProductsComponent} from '../../products/components/products.component';
 import {UsersComponent} from '../../users/components/users.component';
@@ -19,6 +18,13 @@ import {RetailersComponent} from '../../retailers/components/retailers.component
 import {OffersComponent} from '../../offers/components/offers.component';
 import {RemittanceComponent} from '../../dashboard/components/remittance.component';
 import {LayoutUserComponent} from '../../users/components/layout-user.component';
+import {LayoutRetailerComponent} from '../../retailers/components/layout-retailer.component';
+import {AccountReceivableComponent} from '../../dashboard/components/account-receivable.component';
+import {VisitedRetailerComponent} from '../../dashboard/components/visited-retailer.component';
+import {UnservedOrderComponent} from '../../dashboard/components/unserved-order.component';
+import {SalesOrderComponent} from '../../dashboard/components/sales-order.component';
+import {OrderDetailComponent} from '../../dashboard/components/order-detail.component';
+import {AdminProfileComponent} from '../../admin/components/admin-profile.component';
 
 @Component({
     selector : 'main-page',
@@ -31,9 +37,9 @@ import {LayoutUserComponent} from '../../users/components/layout-user.component'
 @RouteConfig([
     // PARENT PAGE - START
     // {
-    //     path: '/home',
-    //     name: 'Home',
-    //     component: HomeComponent
+    //     path: '/login',
+    //     name: 'Login',
+    //     component: LoginComponent
     // },
     // PARENT PAGE - END
     
@@ -63,17 +69,53 @@ import {LayoutUserComponent} from '../../users/components/layout-user.component'
         name: 'Products',
         component: ProductsComponent
     },
+    {
+        path: '/adminProfile',
+        name: 'AdminProfile',
+        component: AdminProfileComponent
+    },
     // Dashboard
+    {
+        path: '/salesOrder',
+        name: 'SalesOrder',
+        component: SalesOrderComponent
+    },
     {
         path: '/remittance',
         name: 'Remittance',
         component: RemittanceComponent
+    },
+    {
+        path: '/accountReceivable',
+        name: 'AccountReceivable',
+        component: AccountReceivableComponent
+    },
+    {
+        path: '/visitedRetailer',
+        name: 'VisitedRetailer',
+        component: VisitedRetailerComponent
+    },
+    {
+        path: '/unservedOrderComponent',
+        name: 'UnservedOrder',
+        component: UnservedOrderComponent
+    },
+    {
+        path: '/orderDetail',
+        name: 'OrderDetail',
+        component: OrderDetailComponent
     },
     // Users
     {
         path: 'users/...',
         name: 'Users',
         component: LayoutUserComponent
+    },
+    // RetailersComponent
+    {
+        path: 'retailers/...',
+        name: 'Retailers',
+        component: LayoutRetailerComponent
     }
 
 ])
@@ -83,6 +125,7 @@ export class MainPageComponent {
     constructor (
         private _layoutService: LayoutService,
         private _matchMediaService: MatchMediaService) {}
+
 
     getResize() {
         return this._matchMediaService.getMm();

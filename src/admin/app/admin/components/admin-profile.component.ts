@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'retailers',
-    templateUrl: './app/retailers/components/retailers.component.html',
+    selector: 'admin-profile',
+    templateUrl: './app/admin/components/admin-profile.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class RetailersComponent {
+export class AdminProfileComponent {
     private vDate: Date;
     
     constructor(
@@ -29,7 +29,7 @@ export class RetailersComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('RetailersList');
+        this._layoutService.setCurrentPage('AdminProfile');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }
@@ -38,11 +38,12 @@ export class RetailersComponent {
         return this.vDate.toLocaleDateString('en-US');
     }
     
-    getResize() {
-        return this._matchMediaService.getMm();
+    gotoDetail(navigation:string) {
+        this._headerService.setNavigationState(navigation);
+        this._pageNavigationService.navigate(navigation,null,null);
     }
 
-    goToDetail(name:string) {
-        this._pageNavigationService.navigate('Retailers', null, null);
+    getResize() {
+        return this._matchMediaService.getMm();
     }
 }
