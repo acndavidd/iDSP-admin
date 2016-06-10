@@ -47,4 +47,8 @@ export class RetailersComponent {
     goToDetail(name:string) {
         this._pageNavigationService.navigate('Retailers', null, null);
     }
+
+    goToDetailDSP(name:string) {
+        this._pageNavigationService.navigate('Users/UserDetail', null, null);
+    }
 }

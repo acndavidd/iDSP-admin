@@ -46,7 +46,7 @@ import {LeftMenuComponent} from '../../shared/components/left-menu.component';
         path: '/userRetailerRoute',
         name: 'UserRetailerRoute',
         component: UserRetailerRouteComponent
-    },
+    }
 ])
 
 export class LayoutUserComponent {
