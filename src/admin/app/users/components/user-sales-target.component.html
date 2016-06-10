@@ -1,3 +1,127 @@
 <div class="content">
     <h1>User Sales Target</h1>
+    <div class="table-cont">
+        <div class="scrolled-x">
+            <table id="table" class="main-table">
+                <tr class="main green">
+                    <td class="main-td">Brand</td>
+                    <td class="main-td">Category</td>
+                    <td class="main-td">Sub Category</td>
+                    <td class="main-td">Sales Target</td>
+                    <td class="main-td">Actual Sales</td>
+                    <td class="main-td">Percentage</td>
+                    <td class="main-td">Actions</td>
+                </tr>
+                <tr class="main gainsboro">
+                    <td class="main-td">SMART</td>
+                    <td class="main-td">SIM</td>
+                    <td class="main-td">Smart SIM</td>
+                    <td class="main-td">200</td>
+                    <td class="main-td">150</td>
+                    <td class="main-td">75%</td>
+                    <td class="main-td"></td>
+                </tr>
+                <tr class="main white-smoke">
+                    <td class="main-td">SUN</td>
+                    <td class="main-td">SIM</td>
+                    <td class="main-td">Special SIM</td>
+                    <td class="main-td">100</td>
+                    <td class="main-td">70</td>
+                    <td class="main-td">70%</td>
+                    <td class="main-td"></td>
+                </tr>
+                <tr class="main gainsboro">
+                    <td class="main-td">SUN</td>
+                    <td class="main-td">SIM</td>
+                    <td class="main-td">Special SIM</td>
+                    <td class="main-td">100</td>
+                    <td class="main-td">70</td>
+                    <td class="main-td">70%</td>
+                    <td class="main-td"></td>
+                </tr>
+                <tr class="main white-smoke">
+                    <td class="main-td">SUN</td>
+                    <td class="main-td">SIM</td>
+                    <td class="main-td">Special SIM</td>
+                    <td class="main-td">100</td>
+                    <td class="main-td">70</td>
+                    <td class="main-td">70%</td>
+                    <td class="main-td"></td>
+                </tr>
+                <tr class="main gainsboro">
+                    <td class="main-td">SUN</td>
+                    <td class="main-td">SIM</td>
+                    <td class="main-td">Special SIM</td>
+                    <td class="main-td">100</td>
+                    <td class="main-td">70</td>
+                    <td class="main-td">70%</td>
+                    <td class="main-td"><div class="edit-gray"></div></td>
+                </tr>
+            </table>            
+        </div>
+
+        <div class="paging">
+            <ul class="pagination">
+                <li><a href="">&raquo;</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">2</a></li>
+                <li><a class="active" href="">1</a></li>
+                <li><a href="">&laquo;</a></li>
+            </ul>
+            <div class="clear-fix"></div>
+        </div>
+        <h3>Add/Edit Sales Target</h3>
+        <table class="detail-table">        	
+	        <tr class="detail-tr">
+	            <td class="detail-capt-td">Brand</td>
+	            <td class="detail-colon-td">:</td>
+	            <td class="detail-content-td">
+	            	<select>
+		                <option value="1">SMART</option>
+		                <option value="2">SUN</option>
+            		</select>
+            	</td>
+	        </tr>
+	        <tr class="detail-tr">
+	            <td class="detail-capt-td">Category</td>
+	            <td class="detail-colon-td">:</td>
+	            <td class="detail-content-td">
+	            	<select>
+		                <option value="1">Airtime</option>
+		                <option value="2">Broadband</option>
+		                <option value="2">SIM</option>
+            		</select>
+	            </td>
+	        </tr>
+	        <tr class="detail-tr">
+	            <td class="detail-capt-td">Sub Category</td>
+	            <td class="detail-colon-td">:</td>
+	            <td class="detail-content-td">
+	            	<select>
+		                <option value="1">Smartload</option>
+		                <option value="2">Xpressload</option>
+            		</select>
+	            </td>
+	        </tr>
+	         <tr class="detail-tr">
+	            <td class="detail-capt-td">Current Sales Target</td>
+	            <td class="detail-colon-td">:</td>
+	            <td class="detail-content-td"><div id ="sales-target">0</div></td>
+	        </tr>
+	        <tr class="detail-tr">
+	            <td class="detail-capt-td">New Target</td>
+	            <td class="detail-colon-td">:</td>
+	            <td class="detail-content-td"><input type="number" placeholder="Enter Sales Target"></td>
+	        </tr>
+	        <tr class="detail-tr">
+	        	<div class="button-cont-content">
+	                <div class="button main">SAVE</div>
+	                <div class="button main reset">RESET</div>
+        		</div>
+	        </tr>
+        </table>
+    </div>
 </div>

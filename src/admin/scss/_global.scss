@@ -50,6 +50,17 @@ a:hover{
     color:$apple;
 }
 
+//STYLING
+&.underline{
+    text-decoration:underline;
+}
+
+//IMAGE
+&.edit-gray {
+    background: url(#{$icon-edit-gray})no-repeat;
+    background-size: 50px;
+}
+
 //INPUT
 
 select{
