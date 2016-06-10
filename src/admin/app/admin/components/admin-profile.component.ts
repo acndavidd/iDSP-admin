@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'users',
-    templateUrl: './app/users/components/user-inventory.component.html',
+    selector: 'admin-profile',
+    templateUrl: './app/admin/components/admin-profile.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,11 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class UserInventoryComponent {
-    vLoadShow = true;
-    vPhysicalShow = false;
-    vLoadActive = true;
-    vPhysicalActive = false;
+export class AdminProfileComponent {
     private vDate: Date;
     
     constructor(
@@ -33,7 +29,7 @@ export class UserInventoryComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('UsersInventory');
+        this._layoutService.setCurrentPage('AdminProfile');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }
@@ -42,7 +38,7 @@ export class UserInventoryComponent {
         return this.vDate.toLocaleDateString('en-US');
     }
     
-    gotoInventory(navigation:string) {
+    gotoDetail(navigation:string) {
         this._headerService.setNavigationState(navigation);
         this._pageNavigationService.navigate(navigation,null,null);
     }
@@ -50,21 +46,4 @@ export class UserInventoryComponent {
     getResize() {
         return this._matchMediaService.getMm();
     }
-
-    showTabLoad() {
-        this.vLoadShow = true;
-        this.vPhysicalShow = false;
-        this.vLoadActive = true;
-        this.vPhysicalActive = false;
-        this._layoutService.setLoadFilterShow(true);
-    }
-
-    showTabPhysical() {
-        this.vLoadShow = false;
-        this.vPhysicalShow = true;
-        this.vLoadActive = false;
-        this.vPhysicalActive = true;
-        this._layoutService.setLoadFilterShow(false);
-    }
-
 }

@@ -50,6 +50,29 @@ export class LayoutService {
         button: false
     };
 
+    // vTabState = {
+    //     loadshow :false,
+    // };
+
+    setLoadFilterShow(pFilterShow:boolean) {
+        // this.vTabState.loadshow = pFilterShow;
+        // if(this.vTabState.loadshow === true) {
+        if(pFilterShow === true) {
+                this.vFilterState.brand = false;
+                this.vFilterState.category = false;
+                this.vFilterState.subcategory = false;
+                this.vFilterState.productid = false;
+                this.vFilterState.button = false;
+        }
+        else {
+            this.vFilterState.brand = true;
+            this.vFilterState.category = true;
+            this.vFilterState.subcategory = true;
+            this.vFilterState.productid = true;
+            this.vFilterState.button = true;
+        } 
+    }
+
     getCurrentPage() {
         return this.vCurrentPage;
     }
@@ -110,7 +133,8 @@ export class LayoutService {
             pCurrent === 'Users' ||
             pCurrent === 'Retailers' ||
             pCurrent === 'Offers' ||
-            pCurrent === 'Products') {
+            pCurrent === 'Products' ||
+            pCurrent === 'AdminProfile') {
 
             this._pageNavigationService.resetListPreviousData();
 
@@ -118,21 +142,6 @@ export class LayoutService {
                 appHeader: true,
                 appFooter: false,
                 leftMenu: false
-            };
-        }
-        else if (
-            pCurrent === 'UserDetail' ||
-            pCurrent === 'UserInventory' ||
-            pCurrent === 'UserSalesOrder' ||
-            pCurrent === 'UserRetailerRoute' ) {
-
-
-            this._pageNavigationService.resetListPreviousData();
-
-            this.vLayoutState = {
-                appHeader: true,
-                appFooter: false,
-                leftMenu: false,
             };
         }
 
@@ -165,12 +174,6 @@ export class LayoutService {
     getCurrentPointer() {
         return this.vCurrentPointer;
     }
-    // for hardcode
-    // toggleAdd() {
-    //     if (this.vCurrentPage === 'BasicCallProcedure') {
-    //         this._pageNavigationService.navigate('BCPAddRetailerRoute', null, null);
-    //     }
-    // }
 
     // for backend
         toggleAdd() {
@@ -239,11 +242,22 @@ export class LayoutService {
             this.vFilterState.orderno = true;
             this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'UsersInventory') {
-            this.vFilterState.brand = true;
-            this.vFilterState.category = true;
-            this.vFilterState.subcategory = true;
-            this.vFilterState.productid = true;
-            this.vFilterState.button = true;
+
+            // if(this.vTabState.loadshow === true) {
+            //     this.vFilterState.brand = false;
+            //     this.vFilterState.category = false;
+            //     this.vFilterState.subcategory = false;
+            //     this.vFilterState.productid = false;
+            //     this.vFilterState.button = false;
+            // }
+            // else{
+            //     this.vFilterState.brand = true;
+            //     this.vFilterState.category = true;
+            //     this.vFilterState.subcategory = true;
+            //     this.vFilterState.productid = true;
+            //     this.vFilterState.button = true;
+            // }
+
         }else if(this.vCurrentPage === 'UsersSalesTarget') {
             this.vFilterState.month = true;
             this.vFilterState.year = true;
