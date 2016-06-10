@@ -9,8 +9,8 @@ import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 
 @Component({
-    selector: 'retailers-collection',
-    templateUrl: './app/retailers/components/retailers-collection.component.html',
+    selector: 'retailer-collection',
+    templateUrl: './app/retailers/components/retailer-collection.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -19,7 +19,7 @@ import {FilterComponent} from '../../shared/components/filter.component';
     ],
 })
 
-export class RetailersCollectionComponent {
+export class RetailerCollectionComponent {
     private vDate: Date;
     
     constructor(
@@ -29,7 +29,7 @@ export class RetailersCollectionComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
-        this._layoutService.setCurrentPage('RetailersCollection');
+        this._layoutService.setCurrentPage('RetailerCollection');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();
     }

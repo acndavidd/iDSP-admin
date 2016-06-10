@@ -8,7 +8,7 @@ import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 import {RetailerDetailComponent} from './retailer-detail.component';
-import {RetailersCollectionComponent} from './retailers-collection.component';
+import {RetailerCollectionComponent} from './retailer-collection.component';
 import {RetailerFrequencyComponent} from './retailer-frequency.component';
 
 @Component({
@@ -31,8 +31,8 @@ import {RetailerFrequencyComponent} from './retailer-frequency.component';
     },
     {
         path: '../retailersCollection',
-        name: 'RetailersCollection',
-        component: RetailersCollectionComponent
+        name: 'RetailerCollection',
+        component: RetailerCollectionComponent
     },
     {
         path: '/retailerFrequency',
