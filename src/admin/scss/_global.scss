@@ -23,8 +23,15 @@ h3{
     -webkit-margin-after: 0.5em;
 }
 
+.sub-title{
+    -webkit-margin-before: 0.2em;
+    -webkit-margin-after: 0.2em;
+    padding: 0.8rem;
+}
+
 //COLOR
-.green { color: $apple; }
+.green              { color: $apple; }
+&.light-grey        { background-color: $whisper; }
 
 //LINK
 a{
@@ -199,6 +206,16 @@ select:focus{
                     float: right;
                 }
             }
+
+            .icon{
+                float: left;
+            }
+
+            .large{
+                float: left;
+                padding: 6px;
+                font-size: $large-text;
+            }
         }
 
         .scrolled-x{
@@ -295,6 +312,15 @@ select:focus{
     // }  
 }
 
+// icon
+
+.icon{
+    background: url('../img/icon-idsp-2/setting-grey.png')no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
 
 .clear-fix{
     clear: both;
@@ -436,7 +462,6 @@ END OF CHECKBOX
 &.green             { color: $apple; }
 &.deep-cyan         { color: $deep-cyan; }
 &.red               { color: $red; }
-
 
 /*
 ===========================================================

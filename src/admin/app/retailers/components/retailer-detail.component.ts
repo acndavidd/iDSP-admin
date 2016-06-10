@@ -29,6 +29,7 @@ export class RetailerDetailComponent {
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService
     ) {
+        window.scrollTo(0,0);
         this._layoutService.setCurrentPage('RetailersDetail');
         this._headerService.setTitle('iDSP Administration Panel');
         this.vDate = new Date();

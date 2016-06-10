@@ -1,1 +1,213 @@
-asdf
+<div class="general-container">
+    <div class="info-cont">
+        <div class="inner-info navigation">
+            My Dashboard >> Collection Amount >> Order Detail
+        </div>
+        <div class="inner-info date">
+            {{getToday()}}
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <div class="clear-fix"></div>
+    <div class="left">
+        <filter></filter>
+    </div>
+    <div class="right">
+        <h1>Order Detail #12345</h1>
+        <table class="detail-table">
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Date</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">2016-05-18 13:00</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Retailer Name</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">Gloria Cell</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Smart MIN</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">9999000014</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">SUN MIN</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">9999000016</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">DSP Name</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">Surya Santoso</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Total Amount (Price After Discount)</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P11,250</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Discount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P700</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Price Before Discount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P11,950</td>
+            </tr>
+        </table>
+        <h2 class="sub-title light-grey">Detail Order</h2>
+        <!--load-->
+        <div class="description-cont">
+            <div class="icon"></div><div class="large">Load</div>
+            <div class="clear-fix"></div>
+        </div>
+        <table class="detail-table">
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Transfer Amount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P6,500</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Total Amount (Price After Discount)</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P6,250</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Discount Amount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P250</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Price Before Discount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P6,500</td>
+            </tr>
+        </table>
+        <div class="table-cont">
+            <div class="scrolled-x">
+                <table id="table" class="main-table">
+                    <tr class="main green">
+                        <td class="main-td">Brand</td>
+                        <td class="main-td">MIN</td>
+                        <td class="main-td">Suggested Order</td>
+                        <td class="main-td">Transfer Amount</td>
+                        <td class="main-td">Promo Code</td>
+                        <td class="main-td">Discount Amount</td>
+                        <td class="main-td">Total Amount</td>
+                    </tr>
+                    <tr class="main gainsboro">
+                        <td class="main-td">SMART</td>
+                        <td class="main-td">9999000214</td>
+                        <td class="main-td">1,500 ₱</td>
+                        <td class="main-td">3,000 ₱</td>
+                        <td class="main-td">load1111</td>
+                        <td class="main-td">100 ₱</td>
+                        <td class="main-td">2,900 ₱</td>
+                    </tr>
+                    <tr class="main white-smoke">
+                        <td class="main-td">SMART</td>
+                        <td class="main-td">9999000215</td>
+                        <td class="main-td">1,500 ₱</td>
+                        <td class="main-td">2,000 ₱</td>
+                        <td class="main-td">load1111</td>
+                        <td class="main-td">100 ₱</td>
+                        <td class="main-td">1,900 ₱</td>
+                    </tr>
+                    <tr class="main gainsboro">
+                        <td class="main-td">SUN</td>
+                        <td class="main-td">9999000216</td>
+                        <td class="main-td">1,000 ₱</td>
+                        <td class="main-td">1,500 ₱</td>
+                        <td class="main-td">load2222</td>
+                        <td class="main-td">50 ₱</td>
+                        <td class="main-td">1,450 ₱</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--physical-->
+        <div class="description-cont">
+            <div class="icon"></div><div class="large">Physical</div>
+            <div class="clear-fix"></div>
+        </div>
+        <table class="detail-table">
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Total Amount (Price After Discount)</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P5,000</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Discount Amount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P450</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Price Before Discount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P5,450</td>
+            </tr>
+        </table>
+        <div class="table-cont">
+            <div class="scrolled-x">
+                <table id="table" class="main-table">
+                    <tr class="main green">
+                        <td class="main-td">Brand</td>
+                        <td class="main-td">Sub Category</td>
+                        <td class="main-td">Product Name</td>
+                        <td class="main-td">Unit Price</td>
+                        <td class="main-td">Suggested Order</td>
+                        <td class="main-td">Order Quantity</td>
+                        <td class="main-td">Amount per SKU</td>
+                        <td class="main-td">Promo Code</td>
+                        <td class="main-td">Discount Amount</td>
+                        <td class="main-td">Total Amount</td>
+                    </tr>
+                    <tr class="main gainsboro">
+                        <td class="main-td">SMART</td>
+                        <td class="main-td">Pinoy SIM</td>
+                        <td class="main-td">SKU1</td>
+                        <td class="main-td">250 ₱</td>
+                        <td class="main-td">5</td>
+                        <td class="main-td">5</td>
+                        <td class="main-td">1,250 ₱</td>
+                        <td class="main-td">phy1111</td>
+                        <td class="main-td">150 ₱</td>
+                        <td class="main-td">1,100 ₱</td>
+                    </tr>
+                    <tr class="main white-smoke">
+                        <td class="main-td">SMART</td>
+                        <td class="main-td">Pinoy SIM</td>
+                        <td class="main-td">SKU2</td>
+                        <td class="main-td">200 ₱</td>
+                        <td class="main-td">20</td>
+                        <td class="main-td">10</td>
+                        <td class="main-td">2,000 ₱</td>
+                        <td class="main-td">phy2222</td>
+                        <td class="main-td">100 ₱</td>
+                        <td class="main-td">1,900 ₱</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h2 class="sub-title light-grey">Payment Detail</h2>
+        <table class="detail-table">
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Collected Amount</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P10,000</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">A/R</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">P1,250</td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Payment Method</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">Credit</td>
+            </tr>
+        </table>
+    </div>
+    <div class="clear-fix"></div>
+</div>

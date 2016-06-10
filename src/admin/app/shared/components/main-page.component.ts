@@ -24,6 +24,7 @@ import {VisitedRetailerComponent} from '../../dashboard/components/visited-retai
 import {UnservedOrderComponent} from '../../dashboard/components/unserved-order.component';
 import {SalesOrderComponent} from '../../dashboard/components/sales-order.component';
 import {OrderDetailComponent} from '../../dashboard/components/order-detail.component';
+import {CollectionAmountComponent} from '../../dashboard/components/collection-amount.component';
 
 @Component({
     selector : 'main-page',
@@ -93,6 +94,11 @@ import {OrderDetailComponent} from '../../dashboard/components/order-detail.comp
         path: '/unservedOrderComponent',
         name: 'UnservedOrder',
         component: UnservedOrderComponent
+    },
+    {
+        path: '/collectionAmount',
+        name: 'CollectionAmount',
+        component: CollectionAmountComponent
     },
     {
         path: '/orderDetail',
