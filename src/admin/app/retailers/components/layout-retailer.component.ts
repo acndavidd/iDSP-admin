@@ -11,6 +11,7 @@ import {RetailerDetailComponent} from './retailer-detail.component';
 import {RetailerCollectionComponent} from './retailer-collection.component';
 import {RetailerFrequencyComponent} from './retailer-frequency.component';
 import {RetailerInventoryComponent} from './retailer-inventory.component';
+import {RetailerShareComponent} from './retailer-share.component';
 
 
 @Component({
@@ -40,6 +41,11 @@ import {RetailerInventoryComponent} from './retailer-inventory.component';
         path: '/retailerInventory',
         name: 'RetailerInventory',
         component: RetailerInventoryComponent
+    },
+    {
+        path: '/retailerShare',
+        name: 'RetailerShare',
+        component: RetailerShareComponent
     },
     {
         path: '/retailerFrequency',

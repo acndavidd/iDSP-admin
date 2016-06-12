@@ -92,6 +92,8 @@ export class LayoutService {
         } 
     }
 
+
+
     getCurrentPage() {
         return this.vCurrentPage;
     }
@@ -292,7 +294,7 @@ export class LayoutService {
             this.vFilterState.brand = true;
             this.vFilterState.subcategory = true;
             this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'RetailersShare') {
+        }else if(this.vCurrentPage === 'RetailerShare') {
             this.vFilterState.brand = true;
             this.vFilterState.category = true;
             this.vFilterState.subcategory = true;
