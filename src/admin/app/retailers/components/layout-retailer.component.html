@@ -11,11 +11,11 @@
     <div class="clear-fix"></div>
     <div class="left">
         <div class="left-menu-cont">
-            <div class="left-menu-item vivid-pink" (click)="goTo('Retailers/RetailerDetail')">Retailers Detail</div>
-            <div class="left-menu-item" (click)="goTo('Retailers/RetailerCollection')">Retailers Collection</div>
-            <div class="left-menu-item" (click)="goTo('Retailers/RetailerInventory')">Retailers Inventory</div>
-            <div class="left-menu-item" (click)="goTo('Retailers/RetailerShare')">Retailers % Share</div>
-            <div class="left-menu-item" (click)="goTo('Retailers/RetailerFrequency')">Retailers Frequency</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getRetailerTabStatus().detail}" (click)="goTo('Retailers/RetailerDetail', 'detail')">Retailers Detail</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getRetailerTabStatus().collection}" (click)="goTo('Retailers/RetailerCollection', 'collection')">Retailers Collection</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getRetailerTabStatus().inventory}" (click)="goTo('Retailers/RetailerInventory', 'inventory')">Retailers Inventory</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getRetailerTabStatus().share}" (click)="goTo('Retailers/RetailerShare', 'share')">Retailers % Share</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getRetailerTabStatus().frequency}" (click)="goTo('Retailers/RetailerFrequency', 'frequency')">Retailers Frequency</div>
         </div>
         <filter></filter>
     </div>

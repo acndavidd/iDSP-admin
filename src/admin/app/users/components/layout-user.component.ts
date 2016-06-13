@@ -11,17 +11,14 @@ import {UserDetailComponent} from './user-detail.component';
 import {UserInventoryComponent} from './user-inventory.component';
 import {UserRetailerRouteComponent} from './user-retailer-route.component';
 import {UserSalesTargetComponent} from './user-sales-target.component';
-import {LeftMenuComponent} from '../../shared/components/left-menu.component';
 
 @Component({
     selector: 'layout-user',
     templateUrl: './app/users/components/layout-user.component.html',
-    // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
-        FilterComponent,
-        LeftMenuComponent
+        FilterComponent
     ],
 })
 
@@ -51,6 +48,13 @@ import {LeftMenuComponent} from '../../shared/components/left-menu.component';
 
 export class LayoutUserComponent {
     private vDate: Date;
+
+    vUserTabState = {
+        detail: true, // default tab
+        inventory: false,
+        salestarget: false,
+        retailerroute: false
+    };
     
     constructor(
         private _router: Router,
@@ -69,5 +73,25 @@ export class LayoutUserComponent {
     
     getResize() {
         return this._matchMediaService.getMm();
+    }
+
+    goTo(page:string, tabname:string) {
+        this._pageNavigationService.navigate(page, null, null);
+        this.setUserTabStatus(tabname);        
+    }
+    
+    resetUserTabStatus() {
+        for(var key in this.vUserTabState) {
+            this.vUserTabState[key] = false;
+        }
+    }
+
+    setUserTabStatus(tabname:string) {
+        this.resetUserTabStatus();
+        this.vUserTabState[tabname] = true;
+    }
+
+    getUserTabStatus() {
+        return this.vUserTabState;
     }
 }

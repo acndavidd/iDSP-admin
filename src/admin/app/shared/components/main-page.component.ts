@@ -26,6 +26,8 @@ import {SalesOrderComponent} from '../../dashboard/components/sales-order.compon
 import {OrderDetailComponent} from '../../dashboard/components/order-detail.component';
 import {CollectionAmountComponent} from '../../dashboard/components/collection-amount.component';
 import {AdminProfileComponent} from '../../admin/components/admin-profile.component';
+import {OfferDetailComponent} from '../../offers/components/offer-detail.component';
+import {OfferEditComponent} from '../../offers/components/offer-edit.component';
 
 @Component({
     selector : 'main-page',
@@ -60,11 +62,23 @@ import {AdminProfileComponent} from '../../admin/components/admin-profile.compon
         name: 'RetailersList',
         component: RetailersComponent
     },
+    // Offers
     {
         path: '/offers',
         name: 'Offers',
         component: OffersComponent
     },
+    {
+        path: '/offerDetail',
+        name: 'OfferDetail',
+        component: OfferDetailComponent
+    },
+    {
+        path: '/offerEdit',
+        name: 'OfferEdit',
+        component: OfferEditComponent
+    },
+    // Product
     {
         path: '/products',
         name: 'Products',

@@ -1,10 +1,12 @@
 import {Component, OnInit} from 'angular2/core';
-import { Router } from 'angular2/router';
+import {Router} from 'angular2/router';
 import {LayoutService} from '../services/layout.service';
 import {MatchMediaService} from '../../shared/services/match-media.service';
 import {PageNavigationService} from '../../shared/services/page-navigation.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {Layout} from '../../../models/layout';
+import {ModalComponent} from './modal.component';
+import {Modal} from '../services/modal.service';
 
 @Component({
     selector: 'admin-header',
@@ -17,7 +19,8 @@ export class HeaderComponent implements OnInit {
         private _router: Router,
         private _matchMediaService: MatchMediaService,
         private _pageNavigationService: PageNavigationService,
-        private _headerService: HeaderService) {}
+        private _headerService: HeaderService,
+        private _modalService: Modal.ModalService) {}
 
     vTitle: string;
 
@@ -62,7 +65,11 @@ export class HeaderComponent implements OnInit {
         this._pageNavigationService.navigate('AdminProfile', null, null);
     }
 
-    // goToLoginPage() {
-    //     this._pageNavigationService.navigate('Login', null, null);
-    // }
+    goToLogin() {
+        // this._router.parent.navigate(['Starter', 'Login']);
+    }
+
+    logout() {
+        this._modalService.showConfirmationModal('Are you sure you want to logout?', this.goToLogin.bind(this));
+    }
 }

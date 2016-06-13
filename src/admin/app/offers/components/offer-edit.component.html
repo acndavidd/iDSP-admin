@@ -1,0 +1,80 @@
+<div class="general-container">
+    <div class="info-cont">
+        <div class="inner-info navigation">
+            Offers >> Offers List
+        </div>
+        <div class="inner-info date">
+            {{getToday()}}
+        </div>
+        <div class="clear-fix"></div>
+    </div>
+    <div class="clear-fix"></div>
+    <div class="left">
+        <filter></filter>
+    </div>
+    <div class="right">
+        <div class="image-cont" style="
+            background:url({{file_srcs}}) left center no-repeat;
+            background-size: contain;" >
+        </div>
+        <div>  
+            <input type="file" (change)="fileChange(input)" #input />
+        </div>
+        <table class="detail-table">
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Title</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td"><input placeholder="Input Title" /></td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Outlet Type</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">
+                    <select>
+                        <option value="" disabled>Select Outlet Type</option>
+                        <option value="">Outlet 1</option>
+                        <option value="">Outlet 2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Priority</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">
+                    <select>
+                        <option value="">High</option>
+                        <option value="">Medium</option>
+                        <option value="">Low</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">How it works</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td"><textarea cols="50" rows="4" placeholder="Input Description"></textarea></td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">Start Date</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">
+                    <input type="date" />
+                    <input class="time" type="time" />
+                </td>
+            </tr>
+            <tr class="detail-tr">
+                <td class="detail-capt-td">End Date</td>
+                <td class="detail-colon-td">:</td>
+                <td class="detail-content-td">
+                    <input type="date" />
+                    <input class="time" type="time" />
+                </td>
+            </tr>
+        </table>
+        <div class="button-cont left">
+            <div class="button main">SAVE</div>
+            <div class="button main reset">RESET</div>
+            <div class="clear-fix"></div>
+        </div>
+    </div>
+    <div class="clear-fix"></div>
+</div> 

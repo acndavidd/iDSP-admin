@@ -1,4 +1,4 @@
-<div class="filter-container">
+<div class="filter-container" [ngClass]="{padding: getFilterStatus().padding}">
     <!--date-->
     <div class="item" *ngIf="getFilterStatus().date">
         <div class="label">Filter by Date</div>

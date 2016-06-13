@@ -146,15 +146,15 @@ export class AuthenticationService {
         pParams._router.navigate(['Starter', 'Login']);
     } 
 
-    logout() {
-        let params = {
-            _layoutService : this._layoutService,
-            _router : this._router,
-            _modalService : this._modalService,
-            _http : this._http
-        };
-        this._modalService.toggleModal('Are you sure you<br/>want to Logout ?', Modal.ModalType.CONFIRMATION, { ModalButton : Modal.ModalButton.OK_CANCEL, callback : this.logoutCallBack, param : params });
-    }
+    // logout() {
+    //     let params = {
+    //         _layoutService : this._layoutService,
+    //         _router : this._router,
+    //         _modalService : this._modalService,
+    //         _http : this._http
+    //     };
+    //     this._modalService.toggleModal('Are you sure you<br/>want to Logout ?', Modal.ModalType.CONFIRMATION, { ModalButton : Modal.ModalButton.OK_CANCEL, callback : this.logoutCallBack, param : params });
+    // }
 
     getLoadingState(): boolean {
         return this.vIsLoading;

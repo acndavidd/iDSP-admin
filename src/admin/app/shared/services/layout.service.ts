@@ -47,7 +47,8 @@ export class LayoutService {
         offerid: false,
         status: false,
         title: false,
-        button: false
+        button: false,
+        padding: false
     };
 
     // vTabState = {
@@ -55,44 +56,36 @@ export class LayoutService {
     // };
 
     setUserInventoryFilter(pFilterShow:boolean) {
-        // this.vTabState.loadshow = pFilterShow;
-        // if(this.vTabState.loadshow === true) {
         if(pFilterShow === true) {
-                this.vFilterState.brand = false;
-                this.vFilterState.category = false;
-                this.vFilterState.subcategory = false;
-                this.vFilterState.productid = false;
-                this.vFilterState.button = false;
-        }
-        else {
+            this.vFilterState.brand = false;
+            this.vFilterState.category = false;
+            this.vFilterState.subcategory = false;
+            this.vFilterState.productid = false;
+            this.vFilterState.button = false;
+            this.vFilterState.padding = false;
+        }else {
             this.vFilterState.brand = true;
             this.vFilterState.category = true;
             this.vFilterState.subcategory = true;
             this.vFilterState.productid = true;
             this.vFilterState.button = true;
+            this.vFilterState.padding = true;
         } 
     }
 
     setRetailerInventoryFilter(pFilterShow:boolean) {
-        // this.vTabState.loadshow = pFilterShow;
-        // if(this.vTabState.loadshow === true) {
         if(pFilterShow === true) {
-                this.vFilterState.brand = false;
-                this.vFilterState.category = false;
-                this.vFilterState.subcategory = false;
-                this.vFilterState.productid = false;
-                this.vFilterState.button = false;
-        }
-        else {
+            this.vFilterState.brand = false;
+            this.vFilterState.subcategory = false;
+            this.vFilterState.button = false;
+            this.vFilterState.padding = false;
+        }else {
             this.vFilterState.brand = true;
-            this.vFilterState.category = true;
             this.vFilterState.subcategory = true;
-            this.vFilterState.productid = true;
             this.vFilterState.button = true;
+            this.vFilterState.padding = true;
         } 
     }
-
-
 
     getCurrentPage() {
         return this.vCurrentPage;
@@ -101,7 +94,6 @@ export class LayoutService {
     getOldCurrentPage() {
         return this.vOldCurrentPage;
     }
-
 
     setOldCurrentPage(pCurrentPage: string) {
         this._pageNavigationService.addListPreviousData(pCurrentPage, null);
@@ -211,12 +203,13 @@ export class LayoutService {
 
     setFilterStatus(page:string) {
         this.resetFilterStatus();
+        this.vFilterState.padding = true;
+        this.vFilterState.button = true;
         if(this.vCurrentPage === 'Products') {
             this.vFilterState.category = true;
             this.vFilterState.subcategory = true;
             this.vFilterState.productid = true;
             this.vFilterState.desc = true;
-            this.vFilterState.button = true;
         }else if(
             this.vCurrentPage === 'SalesOrder' ||
             this.vCurrentPage === 'CollectionAmount'
@@ -226,43 +219,37 @@ export class LayoutService {
             this.vFilterState.dspmin = true;
             this.vFilterState.retailername = true;
             this.vFilterState.orderno = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'Remittance') {
             this.vFilterState.date = true;
             this.vFilterState.dspname = true;
             this.vFilterState.dspmin = true;
             this.vFilterState.remittancetype = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'AccountReceivable') {
             this.vFilterState.retailername = true;
             this.vFilterState.retailermin = true;
             this.vFilterState.dspname = true;
             this.vFilterState.dspmin = true;
             this.vFilterState.amount = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'VisitedRetailer') {
             this.vFilterState.date = true;
             this.vFilterState.retailername = true;
             this.vFilterState.dspname = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'UsersList') {
             this.vFilterState.role = true;
             this.vFilterState.min = true;
             this.vFilterState.name = true;
             this.vFilterState.supervisor = true; 
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'RetailersList') {
             this.vFilterState.min = true;
             this.vFilterState.retailername = true;
             this.vFilterState.dspname = true;
             this.vFilterState.outlettype = true; 
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'UnservedOrder') {
             this.vFilterState.date = true;
             this.vFilterState.dspname = true;
             this.vFilterState.orderno = true;
-            this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'UsersInventory') {
+        }
+        // else if(this.vCurrentPage === 'UsersInventory') {
 
             // if(this.vTabState.loadshow === true) {
             //     this.vFilterState.brand = false;
@@ -279,31 +266,29 @@ export class LayoutService {
             //     this.vFilterState.button = true;
             // }
 
-        }else if(this.vCurrentPage === 'UsersSalesTarget') {
+        // }
+        else if(this.vCurrentPage === 'UsersSalesTarget') {
             this.vFilterState.month = true;
             this.vFilterState.year = true;
             this.vFilterState.brand = true;
             this.vFilterState.category = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'UsersRetailerRoute') {
             this.vFilterState.day = true;
             this.vFilterState.min = true;
             this.vFilterState.retailername = true;
-            this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'RetailersInventory') {
-            this.vFilterState.brand = true;
-            this.vFilterState.subcategory = true;
-            this.vFilterState.button = true;
-        }else if(this.vCurrentPage === 'RetailerShare') {
+        }
+        // else if(this.vCurrentPage === 'RetailersInventory') {
+        //     this.vFilterState.brand = true;
+        //     this.vFilterState.subcategory = true;
+        // }
+        else if(this.vCurrentPage === 'RetailerShare') {
             this.vFilterState.brand = true;
             this.vFilterState.category = true;
             this.vFilterState.subcategory = true;
-            this.vFilterState.button = true;
         }else if(this.vCurrentPage === 'Offers') {
             this.vFilterState.offerid = true;
             this.vFilterState.status = true;
             this.vFilterState.title = true;
-            this.vFilterState.button = true;
         }
         else if(this.vCurrentPage === 'Users' ||
                 this.vCurrentPage === 'UserDetail') {
@@ -311,7 +296,10 @@ export class LayoutService {
             this.vFilterState.subcategory = true;
             this.vFilterState.productid = true;
             this.vFilterState.desc = true;
-            this.vFilterState.button = true;
+        }
+        else {
+            this.vFilterState.padding = false;
+            this.vFilterState.button = false;
         }
     }
 }

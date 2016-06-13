@@ -58,6 +58,9 @@
                     width: 70%;
                     height: 100%;
                     display: flex;
+                    display: -ms-flex; // IE > 10
+                    display: -webkit-flex; // Safari
+                    display: -moz-flex; // Mozilla
                     justify-content: center;
                     vertical-align: middle;
                     

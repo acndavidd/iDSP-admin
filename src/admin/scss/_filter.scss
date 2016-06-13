@@ -3,7 +3,10 @@
     width: 100%;
     background-color: #EEE;
     margin: 20px 0;
-    padding: 0px 0;
+
+    &.padding{
+        padding: 10px 0;
+    }
 
     .item{
         // width: calc(100% - 20px);

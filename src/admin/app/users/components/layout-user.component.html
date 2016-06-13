@@ -10,7 +10,12 @@
     </div>
     <div class="clear-fix"></div>
     <div class="left">
-        <left-menu></left-menu>
+        <div class="left-menu-cont">
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getUserTabStatus().detail}" (click)="goTo('Users/UserDetail', 'detail')">User Detail</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getUserTabStatus().inventory}" (click)="goTo('Users/UserInventory', 'inventory')">User Inventory</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getUserTabStatus().salestarget}" (click)="goTo('Users/UserSalesTarget', 'salestarget')">User Sales Target</div>
+            <div class="left-menu-item" [ngClass]="{'vivid-pink': getUserTabStatus().retailerroute}" (click)="goTo('Users/UserRetailerRoute', 'retailerroute')">User Retailer Route</div>
+        </div>
         <filter></filter>
     </div>
     <div class="right">

@@ -13,16 +13,14 @@ import {RetailerFrequencyComponent} from './retailer-frequency.component';
 import {RetailerInventoryComponent} from './retailer-inventory.component';
 import {RetailerShareComponent} from './retailer-share.component';
 
-
 @Component({
     selector: 'layout-retailer',
     templateUrl: './app/retailers/components/layout-retailer.component.html',
-    // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
         FilterComponent
-    ],
+    ]
 })
 
 @RouteConfig([
@@ -56,6 +54,14 @@ import {RetailerShareComponent} from './retailer-share.component';
 
 export class LayoutRetailerComponent {
     private vDate: Date;
+
+    vRetailerTabState = {
+        detail: true, // default tab
+        collection: false,
+        inventory: false,
+        share: false,
+        frequency: false
+    };
     
     constructor(
         private _router: Router,
@@ -65,9 +71,7 @@ export class LayoutRetailerComponent {
         private _headerService: HeaderService
     ) {
         window.scrollTo(0,0);
-        this._layoutService.setCurrentPage('UsersDetail');
         this._headerService.setTitle('iDSP Administration Panel');
-        // this._headerService.setNavigationState('Products');
         this.vDate = new Date();
     }
     
@@ -79,7 +83,23 @@ export class LayoutRetailerComponent {
         return this._matchMediaService.getMm();
     }
 
-    goTo(page:string) {
+    goTo(page:string, tabname:string) {
         this._pageNavigationService.navigate(page, null, null);
+        this.setRetailerTabStatus(tabname);
+    }
+
+    resetRetailerTabStatus() {
+        for(var key in this.vRetailerTabState) {
+            this.vRetailerTabState[key] = false;
+        }
+    }
+
+    setRetailerTabStatus(tabname:string) {
+        this.resetRetailerTabStatus();
+        this.vRetailerTabState[tabname] = true;
+    }
+
+    getRetailerTabStatus() {
+        return this.vRetailerTabState;
     }
 }

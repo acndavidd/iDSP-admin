@@ -7,12 +7,10 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
-import {ModalComponent} from '../../shared/components/modal.component';
-import {Modal} from '../../shared/services/modal.service';
 
 @Component({
-    selector: 'offers',
-    templateUrl: './app/offers/components/offers.component.html',
+    selector: 'offer-edit',
+    templateUrl: './app/offers/components/offer-edit.component.html',
     // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
@@ -21,21 +19,20 @@ import {Modal} from '../../shared/services/modal.service';
     ],
 })
 
-export class OffersComponent {
+export class OfferEditComponent {
     private vDate: Date;
+    file_srcs: string = '../img/test/Osmart123.png'; // dummy file - delete img src
     
     constructor(
         private _router: Router,
         private _layoutService: LayoutService,
         private _matchMediaService: MatchMediaService,
         private _pageNavigationService: PageNavigationService,
-        private _headerService: HeaderService,
-        private _modalService: Modal.ModalService
+        private _headerService: HeaderService
     ) {
         window.scrollTo(0,0);
-        this._layoutService.setCurrentPage('Offers');
+        this._layoutService.setCurrentPage('OfferEdit');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Offers');
         this.vDate = new Date();
     }
     
@@ -47,12 +44,21 @@ export class OffersComponent {
         return this._matchMediaService.getMm();
     }
 
-    toggleModal() {
-        var message = '<div><img src="../img/test/Osmart123.png"></div>';
-        this._modalService.toggleModal(message, Modal.ModalType.INFO);
-    }
-
     goTo(page:string) {
         this._pageNavigationService.navigate(page, null, null);
+    }
+
+    fileChange(input) {
+        var reader; 
+
+        reader = new FileReader();
+        reader.addEventListener('load', (event) => {
+            this.file_srcs = event.target.result;
+        }, false);
+        if(input.files[0]) {
+            console.log('woy '+input.files.length);
+            reader.readAsDataURL(input.files[0]);
+        }
+        console.log('asdf '+this.file_srcs);
     }
 }

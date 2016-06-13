@@ -70,7 +70,7 @@ export class HomeComponent {
         this._pageNavigationService.navigate('StockReturn', null, null);
     }
     toggleLogout() {
-        this._authenticationService.logout();
+        // this._authenticationService.logout();
     }
     getLayout() {
         return this._layoutService.getLayout();
