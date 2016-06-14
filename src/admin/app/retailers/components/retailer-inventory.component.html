@@ -1,17 +1,18 @@
-	<div class="content">
-    <div class="inner-info"><h1>Gloria Cell Inventory</h1></div>
-    <div class="inner-info">
-            <div class="info-right">
-                <div>Assigned to DSP - Surya Putra Santoso</div>
-            </div>
-        </div>
-    <br>
+<div class="general-content">
+	<div class="info-cont">
+		<div class="inner-info"><h1>Gloria Cell Inventory</h1></div>
+		<div class="inner-info">
+			<div class="info-right">
+				<div>Assigned to DSP - Surya Putra Santoso</div>
+			</div>
+		</div>
+		<div class="clear-fix"></div>
+	</div>
     <div class="tab-cont">
     	<div class="tab-item" (click)="showTabLoad()" [ngClass] = "{active: vLoadActive}">Load</div>
     	<div class="tab-item" (click)="showTabPhysical()" [ngClass] = "{active: vPhysicalActive}">Physical</div>
+		<div class="clear-fix"></div>
     </div>
-    <br>
-    <br>
     <div class="table-cont">
     	<div class="tab-content" *ngIf="vLoadShow">
 	        <div class="scrolled-x">

@@ -1,12 +1,10 @@
 <div class="content">
     <h1>Agnes Saraswati Inventory</h1>
-    <br>
     <div class="tab-cont">
     	<div class="tab-item" (click)="showTabLoad()" [ngClass] = "{active: vLoadActive}">Load</div>
     	<div class="tab-item" (click)="showTabPhysical()" [ngClass] = "{active: vPhysicalActive}">Physical</div>
+		<div class="clear-fix"></div>
     </div>
-    <br>
-    <br>
     <div class="table-cont">
     	<div class="tab-content" *ngIf="vLoadShow">
 	        <div class="scrolled-x">
