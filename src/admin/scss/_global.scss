@@ -391,6 +391,22 @@ textarea:focus{
     height: 30px;
 }
 
+.load-inventory{
+    background: url(#{$icon-inventory-load})no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.physical-inventory{
+    background: url(#{$icon-inventory-physical})no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
 .clear-fix{
     clear: both;
 }
