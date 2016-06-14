@@ -290,14 +290,13 @@ textarea:focus{
             width:calc(50% - 16px);
             padding:5px;
             border: 3px solid $leaf;
-            border-right-width: 0;
             float:left;
             text-align:center;
             cursor:pointer;
 
             &.active{
-            background-color:$leaf;
-            color:$white;
+                background-color:$leaf;
+                color:$white;
             }
         }
 
