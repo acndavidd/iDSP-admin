@@ -42,4 +42,12 @@ export class UnservedOrderComponent {
     getResize() {
         return this._matchMediaService.getMm();
     }
+
+    goToOrderDetail(orderNo:string) {
+        this._pageNavigationService.navigate('OrderDetail', null, null);
+    }
+
+    goToUserDetail(orderNo:string) {
+        this._pageNavigationService.navigate('Users/UserDetail', null, null);
+    }
 }

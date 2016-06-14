@@ -58,7 +58,8 @@ a:hover{
 //IMAGE
 &.edit-gray {
     background: url(#{$icon-edit-gray})no-repeat;
-    background-size: 50px;
+    background-size: 30px;
+    background-position: center;
 }
 
 //INPUT
@@ -310,8 +311,6 @@ textarea:focus{
         }
     }
 
-
-
 //TABLE
     table{
 
@@ -321,10 +320,12 @@ textarea:focus{
             border: 1px solid $white;
             border-collapse: collapse;
         }
+
         &.detail-table {
             width: 100%;
             min-width: 300px;
         }
+
     }
 
     td {
