@@ -11,12 +11,12 @@ $container-login-height: 100%;
 	background-size: cover;
 
 	.anti-spy {
-        width: 40vw;
-        height : 65%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 10px;
-		margin: 10% 30% 10% 30%;        
+        width: 500px;
+	    height: 400px;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    border-radius: 10px;
+	    margin: 15% auto;
+	    position: relative;     
     }
 
     ::-webkit-input-placeholder {
@@ -32,15 +32,14 @@ $container-login-height: 100%;
 		color:    #FFF;
 	}
 	.outer-box {
-		position: absolute;
-	    margin: 0vw 8vw 0vw 8vw;
-	    left: 0;
-	    right: 0;
+		 width: 60%;
+		 margin: 60px auto;
+		 display: inline-block;
 		.header {
 			color: #FFF;
-			font-size: 2vw;
-			text-align: center;
-			margin: 3vw 0vw 3vw 0vw;
+		    font-size: 30px;
+		    text-align: center;
+		    margin: auto;
 		}
 		.inner-box {
 			background-color: rgba(0, 0, 0, 0);
@@ -76,20 +75,19 @@ $container-login-height: 100%;
                 font-size:1.5vw;
             }
 			input {
-				width: 100%;
-				// margin: 2vw auto;
-				display: block;
-				height: 3vw;
-				border: none;
-				font-size: 1.5vw;
-				margin-top: 2vw;
-				margin-bottom: 2vw;
-				background-color: rgba(199, 195, 184, 0.8);
-				border-radius: 10px;
-				outline: 0;
-				color : #FFF;
-				text-align: center;
-				font-style: italic;
+				width: calc(100% - 10px);
+			    display: block;
+			    height: 30px;
+			    border: none;
+			    font-size: 15px;
+			    margin-top: 15px;
+			    margin-bottom: 15px;
+			    background-color: rgba(199, 195, 184, 0.8);
+			    border-radius: 5px;
+			    outline: 0;
+			    color: #FFF;
+			    text-align: center;
+			    font-style: italic;
 			}
 			p {
 				a {
@@ -102,15 +100,16 @@ $container-login-height: 100%;
 		}
 		.login-button
 		{
-			height: 2vw;
-			background-color: $apple;
-			text-align: center;
-			vertical-align: center;
-			font-weight: 600;
-			font-size: 1.5vw;
-    		padding: 1vw;
-    		color : #FFF;
-    		border-radius: 10px;
+			height: 20px;
+		    background-color: #62BB47;
+		    text-align: center;
+		    vertical-align: center;
+		    font-weight: 600;
+		    width: 100%;
+		    font-size: 15px;
+		    padding: 10px 0px;
+		    color: #FFF;
+		    border-radius: 5px;
 		}
 		.login-separator
 		{
@@ -123,17 +122,15 @@ $container-login-height: 100%;
 	}
 	.smart-logo
 	{
-		display: block;
-        //height: 30px;
-        width: 100%;
-        background: 
-        url("../img/smart-logo.png")
-        no-repeat;
-        background-position-x: center;
-        background-position-y: center;
-        background-size: 10vw;
-        z-index: 100;
-		padding-top: 35%;
-		margin-bottom: 5vh;
+		width: 250px;
+	    height: 100px;
+	    background: url("../img/smart-logo.png") no-repeat;
+	    background-position-x: center;
+	    background-position-y: center;
+	    background-size: 150px;
+	    z-index: 100;
+	    position: absolute;
+	    left: calc(50% - (250px / 2));
+	    bottom: 0px;
 	}
 }
