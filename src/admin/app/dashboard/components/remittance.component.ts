@@ -43,4 +43,8 @@ export class RemittanceComponent {
     getResize() {
         return this._matchMediaService.getMm();
     }
+
+    goToUserDetail(orderNo:string) {
+        this._pageNavigationService.navigate('Users/UserDetail', null, null);
+    }
 }

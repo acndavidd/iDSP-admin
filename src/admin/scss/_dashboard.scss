@@ -97,6 +97,55 @@
                         margin: auto;
                         display: inline-block;
                     }
+
+                    .visited {
+                        background: url(#{$icon-round-grad-visited})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+                    .unserved-order {
+                        background: url(#{$icon-round-grad-unserved-order})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
+                    .acc-receivable {
+                        background: url(#{$icon-round-grad-acc-receivable})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
+                    .remittance {
+                        background: url(#{$icon-round-grad-remittance})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
+                    .collection {
+                        background: url(#{$icon-round-grad-collection})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
                 }
 
             }

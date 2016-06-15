@@ -51,6 +51,14 @@ export class SalesOrderComponent {
         this._pageNavigationService.navigate('OrderDetail', null, null);
     }
 
+    goToUserDetail(orderNo:string) {
+        this._pageNavigationService.navigate('Users/UserDetail', null, null);
+    }
+
+    goToRetailerDetail(orderNo:string) {
+        this._pageNavigationService.navigate('Retailers/RetailerDetail', null, null);
+    }
+    
     getSalesOrderList() {
         return this._dashboardService.getSalesOrderList();
     }

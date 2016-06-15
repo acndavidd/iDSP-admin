@@ -58,7 +58,15 @@ a:hover{
 //IMAGE
 &.edit-gray {
     background: url(#{$icon-edit-gray})no-repeat;
-    background-size: 50px;
+    background-size: 30px;
+    background-position: center;
+}
+
+&.download{
+        background: url(#{$icon-download})no-repeat;
+        background-size: 30px;
+        background-position: center;
+        height:20px;
 }
 
 //INPUT
@@ -114,14 +122,15 @@ textarea:focus{
 
 // BUTTON
 
-&.button{
-    width: 75px;
+.button{
+    width: 60px;
     padding: 6px;
     border-radius: 4px;
     text-align: center;
     color: $white;
     background-color: $sulu;
     cursor:pointer;
+
 
     &.main{
         float: left;
@@ -309,8 +318,6 @@ textarea:focus{
         }
     }
 
-
-
 //TABLE
     table{
 
@@ -320,10 +327,12 @@ textarea:focus{
             border: 1px solid $white;
             border-collapse: collapse;
         }
+
         &.detail-table {
             width: 100%;
             min-width: 300px;
         }
+
     }
 
     td {
@@ -376,6 +385,22 @@ textarea:focus{
 
 .icon{
     background: url('../img/icon-idsp-2/setting-grey.png')no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.load-inventory{
+    background: url(#{$icon-inventory-load})no-repeat;
+    background-position: center;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.physical-inventory{
+    background: url(#{$icon-inventory-physical})no-repeat;
     background-position: center;
     background-size: 30px;
     width: 30px;
@@ -583,7 +608,7 @@ LIST VIEW - BUTTON
         float:left;
     }
 
-    .button {
+    &.button {
         display: inline-block;
         width: 70%;
         padding-bottom: 2vw;
