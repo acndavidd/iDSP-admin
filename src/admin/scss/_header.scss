@@ -19,7 +19,7 @@
         
         .title{
           float: left;
-          width: calc(90% - 40px);
+          width: calc(83% - 40px);
           color: $white;
           font-size: $larger-text;
           padding: 12px 20px;
@@ -28,14 +28,14 @@
         
         .title-logo{
           float: left;
-          width: calc(10% - 12px);
-          padding: 6px;
+          width: calc(17% - 12px);
+          /* padding: 6px; */
           
           .smart{
-            background: url("../img/smart-logo.png") no-repeat;
-            background-position: center;
-            background-size: 75px;
-            height: 35px;
+              background: url("../img/smart-logo-bg.png") no-repeat;
+              background-position: center;
+              background-size: 165px;
+              height: 50px;
           }
         }
         
@@ -48,7 +48,8 @@
       width: 100%;
       background-color: $white;
       height: 40px;
-      border-bottom: 1px solid $apple;
+      // border-bottom: 1px solid $apple;
+      box-shadow: 0px 1px 16px 0px rgba(0,0,0,0.2);
       
       .nav-left{
         float: left;
@@ -63,7 +64,7 @@
           font-size: $normal-text;
           // padding: 0.9vw;
           padding: 11.5px;
-          border-right: 1px solid $apple;
+          // border-right: 1px solid $apple;
           cursor: pointer;
           
           &.active{

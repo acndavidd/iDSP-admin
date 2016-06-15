@@ -25,20 +25,25 @@
             .tile{
                 float: left;
                 width: calc(100% / 3 - 22px);
-                height: 150px;
+                height: 125px;
                 margin: 10px;
                 cursor: pointer;
+                border-radius: 4px;
 
                 &.purple{
                     background-color: $purple;
                 }
+
+                &.green{
+                    background-color: $fresh-green;
+                }
                 
                 &.gray{
-                    background-color: $silver-sand;
+                    background-color: $dark-grey;
                 }
 
-                &.red{
-                    background-color: $vivid-pink;
+                &.peach{
+                    background-color: $peach;
                 }
 
                 &.yellow{
@@ -98,8 +103,18 @@
                         display: inline-block;
                     }
 
+                    .sales-order {                        
+                        background: url(#{$icon-round-white-collection})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
                     .visited {
-                        background: url(#{$icon-round-grad-visited})no-repeat;
+                        background: url(#{$icon-round-white-visited})no-repeat;
                         background-position: center;
                         background-size: 50px;
                         width: 50px;
@@ -108,7 +123,7 @@
                         display: inline-block;
                     }
                     .unserved-order {
-                        background: url(#{$icon-round-grad-unserved-order})no-repeat;
+                        background: url(#{$icon-round-white-unserved })no-repeat;
                         background-position: center;
                         background-size: 50px;
                         width: 50px;
@@ -118,7 +133,7 @@
                     }
 
                     .acc-receivable {
-                        background: url(#{$icon-round-grad-acc-receivable})no-repeat;
+                        background: url(#{$icon-round-white-acc-rec})no-repeat;
                         background-position: center;
                         background-size: 50px;
                         width: 50px;
@@ -128,7 +143,7 @@
                     }
 
                     .remittance {
-                        background: url(#{$icon-round-grad-remittance})no-repeat;
+                        background: url(#{$icon-round-white-remittance})no-repeat;
                         background-position: center;
                         background-size: 50px;
                         width: 50px;
@@ -138,7 +153,27 @@
                     }
 
                     .collection {
-                        background: url(#{$icon-round-grad-collection})no-repeat;
+                        background: url(#{$icon-round-white-collection})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
+                    .dsp {
+                        background: url(#{$icon-round-white-dsp})no-repeat;
+                        background-position: center;
+                        background-size: 50px;
+                        width: 50px;
+                        height: 50px;
+                        margin: auto;
+                        display: inline-block;
+                    }
+
+                    .retailer{
+                        background: url(#{$icon-round-white-retailer})no-repeat;
                         background-position: center;
                         background-size: 50px;
                         width: 50px;

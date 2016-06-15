@@ -4,22 +4,22 @@
     <div class="dashboard-content">
         <h1 class="title">My Dashboard</h1>
         <div class="tiles">
-            <div class="tile purple" (click)="goTo('SalesOrder')">
+            <div class="tile green" (click)="goTo('SalesOrder')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">P 75,000</div>
                         <div class="desc">Sales Order</div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="collection"></div>
+                    <div class="sales-order"></div>
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile gray" (click)="goTo('CollectionAmount')">
+            <div class="tile green" (click)="goTo('CollectionAmount')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">26,500 P</div>
                         <div class="desc">Collection Amount</div>
                     </div>
                 </div>
@@ -28,10 +28,10 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile red" (click)="goTo('UnservedOrder')">
+            <div class="tile peach" (click)="goTo('UnservedOrder')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">200</div>
                         <div class="desc">Unserved Order</div>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                 <div class="clear-fix"></div>
             </div>
             <div class="clear-fix"></div>
-            <div class="tile red" (click)="goTo('Remittance')">
+            <div class="tile orange" (click)="goTo('Remittance')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">10,000 P</div>
                         <div class="desc">Remittance Amount</div>
                     </div>
                 </div>
@@ -53,27 +53,27 @@
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile yellow" (click)="goTo('AccountReceivable')">
+            <div class="tile peach" (click)="goTo('AccountReceivable')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">6,400 P</div>
                         <div class="desc">Account Receivable <br>(BCP only)</div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="collection"></div>
+                    <div class="acc-receivable"></div>
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile purple" (click)="goTo('UsersList')">
+            <div class="tile yellow" (click)="goTo('UsersList')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">44</div>
                         <div class="desc"># of DSP</div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="acc-receivable"></div>
+                    <div class="dsp"></div>
                 </div>
                 <div class="clear-fix"></div>
             </div>
@@ -81,19 +81,19 @@
             <div class="tile blue" (click)="goTo('RetailersList')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">555</div>
                         <div class="desc"># of Retailers</div>
                     </div>
                 </div>
                 <div class="right">
-                    <div class="acc-receivable"></div>
+                    <div class="retailer"></div>
                 </div>
                 <div class="clear-fix"></div>
             </div>
-            <div class="tile orange" (click)="goTo('VisitedRetailer')">
+            <div class="tile blue" (click)="goTo('VisitedRetailer')">
                 <div class="left">
                     <div class="inner-left">
-                        <div class="value">P</div>
+                        <div class="value">200</div>
                         <div class="desc">Visited Retailer Route</div>
                     </div>
                 </div>
