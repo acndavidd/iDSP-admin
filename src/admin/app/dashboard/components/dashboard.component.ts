@@ -35,7 +35,7 @@ export class DashboardComponent {
     }
     
     getToday() {
-        return this.vDate.toLocaleDateString('en-US');
+        return this.vDate;
     }
     
     getResize() {

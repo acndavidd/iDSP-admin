@@ -108,6 +108,18 @@ export class DashboardService {
         }
     ];
 
+    vRemittanceData = [
+        {
+            ID: 'rmt123',
+            Date: '2016-05-18 13:00',
+            DSPName: 'Surya Santoso',
+            DSPMIN: '9999000001',
+            AcknowledgeBy: 'Distro A',
+            RemittanceType: 'Cash',
+            TotalRemittance: 1500
+        }
+    ];
+
     getSalesOrderList() {
         return this.vSalesOrderData;
     }

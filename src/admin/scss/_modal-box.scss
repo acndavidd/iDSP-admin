@@ -28,7 +28,8 @@
             .modal-body {
                 display: inline-block;
                 width: calc(100% - 20px);
-                padding: 0px 0px 0px 10px;
+                padding: 0 10px;
+                // padding: 0px 0px 0px 10px;
                 .item-header {
                     font-size: 24px;
                     margin-bottom: 30px;
@@ -97,41 +98,25 @@
             }
             .modal-footer {
                 display: inline-block;
-                width: calc(100% - 20px);
+                width: calc(100%);
                 text-align: center;
-                /*margin: 0px 10px 20px 10px;*/
                 .one{
-                    margin-left: 35%;
-                    .button{
-                        width : 60%;
-                    }
-                }
-                .two{
-                    margin-left:20%;
                     .button{
                         width : 40%;
                     }
                 }
-                .three{
-                    margin-left:10%;
+                .two{
                     .button{
                         width : 30%;
+                        margin: 0 3%;
                     }
                 }
-                .one,.two,.three{
+                .one,.two,{
                     .button {
-                        float:left;
-                        margin-bottom:5%;
-                        margin-right: 5%;
-                        line-height: 5vh;
-                        margin-top: 5px;
                         display: inline-block;
                         color: #FFF;
                         cursor: pointer;
                         text-align: center;
-                    }
-                    .button:last-child{
-                        margin-right: 0%;
                     }
                 }
                 .green {

@@ -7,16 +7,19 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
+import {SortService} from '../../shared/services/sort.service';
 
 @Component({
     selector: 'remittance',
     templateUrl: './app/dashboard/components/remittance.component.html',
-    // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
         FilterComponent
     ],
+    providers: [
+        SortService
+    ]
 })
 
 export class RemittanceComponent {
@@ -32,7 +35,6 @@ export class RemittanceComponent {
         window.scrollTo(0,0);
         this._layoutService.setCurrentPage('Remittance');
         this._headerService.setTitle('iDSP Administration Panel');
-        this._headerService.setNavigationState('Dashboard');
         this.vDate = new Date();
     }
     
@@ -47,4 +49,9 @@ export class RemittanceComponent {
     goToUserDetail(orderNo:string) {
         this._pageNavigationService.navigate('Users/UserDetail', null, null);
     }
+
+    getSortStatus(header:string) {
+
+    }
+
 }
