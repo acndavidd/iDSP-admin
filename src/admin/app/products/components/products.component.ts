@@ -7,16 +7,20 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
+import {SortService} from '../../shared/services/sort.service';
+import {ProductsService} from '../services/products.service';
 
 @Component({
     selector: 'products',
     templateUrl: './app/products/components/products.component.html',
-    // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
         FilterComponent
     ],
+    providers: [
+        ProductsService
+    ]
 })
 
 export class ProductsComponent {
@@ -27,7 +31,9 @@ export class ProductsComponent {
         private _layoutService: LayoutService,
         private _matchMediaService: MatchMediaService,
         private _pageNavigationService: PageNavigationService,
-        private _headerService: HeaderService
+        private _headerService: HeaderService,
+        private _sortService: SortService,
+        private _productService: ProductsService
     ) {
         this._layoutService.setCurrentPage('Products');
         this._headerService.setTitle('iDSP Administration Panel');
@@ -41,5 +47,13 @@ export class ProductsComponent {
     
     getResize() {
         return this._matchMediaService.getMm();
+    }
+
+    getProductList() {
+        return this._productService.getProductList();
+    }
+
+    sort(header:string) {
+        this._sortService.sort(this.getProductList(), header);
     }
 }

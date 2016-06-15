@@ -28,6 +28,7 @@ import {Modal} from './shared/services/modal.service';
 // import {LeftMenuComponent} from './shared/components/left-menu.component';
 import {IdleService} from './shared/services/idle.service';
 import {Observable} from 'rxjs/Observable';
+import {SortService} from './shared/services/sort.service';
 
 declare var FastClick: FastClickStatic;
 declare var configChannel: any;
@@ -66,7 +67,8 @@ declare var configChannel: any;
         Modal.ModalService,
         HeaderService,
         // RetailerService,
-        IdleService
+        IdleService,
+        SortService
     ]
 })
 

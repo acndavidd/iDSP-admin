@@ -7,16 +7,19 @@ import {MatchMediaService} from '../../shared/services/match-media.service';
 import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
+import {DashboardService} from '../services/dashboard.service';
 
 @Component({
     selector: 'sales-order',
     templateUrl: './app/dashboard/components/sales-order.component.html',
-    // templateUrl: 'app/shared/components/home.component.html',
     directives: [
         NgModel,
         ROUTER_DIRECTIVES,
         FilterComponent
     ],
+    providers: [
+        DashboardService
+    ]
 })
 
 export class SalesOrderComponent {
@@ -27,7 +30,8 @@ export class SalesOrderComponent {
         private _layoutService: LayoutService,
         private _matchMediaService: MatchMediaService,
         private _pageNavigationService: PageNavigationService,
-        private _headerService: HeaderService
+        private _headerService: HeaderService,
+        private _dashboardService: DashboardService
     ) {
         window.scrollTo(0,0);
         this._layoutService.setCurrentPage('SalesOrder');
@@ -45,5 +49,9 @@ export class SalesOrderComponent {
 
     goToOrderDetail(orderNo:string) {
         this._pageNavigationService.navigate('OrderDetail', null, null);
+    }
+
+    getSalesOrderList() {
+        return this._dashboardService.getSalesOrderList();
     }
 }

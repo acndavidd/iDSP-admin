@@ -23,48 +23,17 @@
                         <td class="main-td">Sub Category</td>
                         <td class="main-td">Product ID</td>
                         <td class="main-td">Description</td>
-                        <td class="main-td">Unit Price</td>
+                        <td class="main-td" (click)="sort('UnitPrice')">Unit Price</td>
                     </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td">Smart </td>
-                        <td class="main-td">SIM</td>
-                        <td class="main-td">SmartLoad</td>
-                        <td class="main-td">SKU1</td>
-                        <td class="main-td">SKU1 is xxxx</td>
-                        <td class="main-td">P5,000</td>
+
+                    <tr class="main" [ngClass]="{gainsboro: (i%2)==0, 'white-smoke': (i%2)==1}" *ngFor="#item of getProductList(); #i = index">
+                        <td class="main-td">{{item.Brand}}</td>
+                        <td class="main-td">{{item.Category}}</td>
+                        <td class="main-td">{{item.SubCategory}}</td>
+                        <td class="main-td">{{item.ProductID}}</td>
+                        <td class="main-td">{{item.Description}}</td>
+                        <td class="main-td">{{item.UnitPrice}}</td>
                     </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td">Smart</td>
-                        <td class="main-td">Broadband</td>
-                        <td class="main-td">Xload</td>
-                        <td class="main-td">SKU2</td>
-                        <td class="main-td">SKU2 is xxx</td>
-                        <td class="main-td">P1,000</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td">Sun</td>
-                        <td class="main-td">SIM</td>
-                        <td class="main-td">SmartLoad</td>
-                        <td class="main-td">SKU1</td>
-                        <td class="main-td">SKU1 is xxxx</td>
-                        <td class="main-td">P3,000</td>
-                    </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td">Sun</td>
-                        <td class="main-td">SIM</td>
-                        <td class="main-td">SmartLoad</td>
-                        <td class="main-td">SKU1</td>
-                        <td class="main-td">SKU1 is xxxx</td>
-                        <td class="main-td">P1,000</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td">Sun</td>
-                        <td class="main-td">SIM</td>
-                        <td class="main-td">SmartLoad</td>
-                        <td class="main-td">SKU1</td>
-                        <td class="main-td">SKU1 is xxxx</td>
-                        <td class="main-td">P1,000</td>
-                    </tr>   
                 </table>
             </div>
             <div class="paging">
