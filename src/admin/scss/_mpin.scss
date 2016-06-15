@@ -11,12 +11,11 @@ $container-mpin-height: 100%;
 	background-size: cover;
 
 	.anti-spy {
-        width: 40vw;
-        height : 65%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-radius: 10px;
-		margin: 10% 30% 10% 30%;        
+        width: 500px;
+	    height: 400px;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    border-radius: 10px;
+	    margin: 15% auto;        
     }
 
     ::-webkit-input-placeholder {
@@ -34,58 +33,44 @@ $container-mpin-height: 100%;
 
 	.smart-logo
 	{
-		display: block;
-        //height: 30px;
-        width: 100%;
-        background: 
-        url("../img/smart-logo.png")
-        no-repeat;
-        background-position-x: center;
-        background-position-y: center;
-        background-size: 10vw;
-        z-index: 100;
-		padding-top: 8vw;
-		margin-bottom: 5vh;
+		width: 250px;
+	    background: url("../img/smart-logo.png") no-repeat;
+	    background-position-x: center;
+	    background-position-y: center;
+	    background-size: 150px;
+	    z-index: 100;
+	    padding-top: 75px;
+	    margin-bottom: 0px;
+	    margin-left: auto;
+	    margin-right: auto;
 	}
 
-	// .outer-box{
-	// 	margin: 20vw auto -3vw;
-	// 	.header {
-	// 		color: #FFF;
-	// 		font-size: 10vw;
-	// 		line-height: 5vw;
-	// 		margin-bottom: 10vw;
-	// 		text-align: center;
-	// 		font-weight: lighter;
-	// 	}
-
 	.outer-box {
-		position: absolute;
-	    margin: 0vw 8vw 0vw 8vw;
-	    left: 0;
-	    right: 0;
+		margin: 10px 50px 10px 50px;
+	    left: auto;
+	    right: auto;
+	    display: inline-block;
 		.header {
 			color: #FFF;
-			font-size: 2vw;
-			text-align: center;
-			margin: 3vw 0vw 2vw 0vw;
+		    font-size: 30px;
+		    text-align: center;
+		    margin: 50px 0px 10px 0px;
 		}
 
 		.mpin-title{
 			color: #FFF;
-			font-size: 1.5vw;
-			text-align: center;
-			position: fixed;
-		    left: 0;
-		    right: 0;
-			//font-weight: lighter;
+		    font-size: 25px;
+		    text-align: center;
+		    left: auto;
+		    right: auto;
+		    margin-bottom: 0px;
 		}
 
 		.mpin-message{
 			color: #FFF;
 			clear: both;
-	        margin: 0.5vw 2vw 0.5vw 2vw;
-	        font-size: 1vw;
+	        margin: 0px 10px 5px 10px;
+    		font-size: 12px;
 	        font-style: italic;
 	        text-align: center;
 		}
@@ -95,25 +80,25 @@ $container-mpin-height: 100%;
 			display: inline-flex;
 			width: 100%;
 		       .mpin-field-item {
-			        font-size: 1.5vw;
-			        line-height: 5vw;
-			        margin: 3vw 0vw 0vw 0vw;
-    				font-weight: bold;
-			        color: #FFF;
+			        font-size: 10px;
+				    line-height: 50px;
+				    margin: 10px 0px 10px 0px;
+				    font-weight: bold;
+				    color: #FFF;
       			}
       	.last-child {
           	margin-right: 0 !important;
         }
         	input {
 		        border: 1px solid #ddd;
-		        width: 75%;
-		        height: 7vh;
-		        background-color: rgba(199, 195, 184, 0.5);
-		        font-size: 1.5vw;
-		        text-align: center;
-		        font-style: italic;
-		        font-weight: 600;
-		       	color: $white;
+			    width: 65%;
+			    height: 45px;
+			    background-color: rgba(199, 195, 184, 0.5);
+			    font-size: 25px;
+			    text-align: center;
+			    font-style: italic;
+			    font-weight: 100;
+			    color: #FFF;
       		}
 		}
 
@@ -124,23 +109,23 @@ $container-mpin-height: 100%;
 
 		.link {
 			text-decoration: underline;
-			font-size: 1.5vw;
-			margin: 0.5vw 0vw 0vw 0vw;
+			font-size: 15px;
+    		margin: 5px 0px 0px 0px;
 		}
 		
 
 		.submit-button
 		{
-    		height: 2vw;
-			background-color: $apple;
-			text-align: center;
-			vertical-align: center;
-			font-weight: 600;
-			font-size: 1.5vw;
-    		padding: 1vw;
-    		color : #FFF;
-    		border-radius: 10px;
-    		// margin: 0vw 7vw 0vw 0vw;
+    		height: 20px;
+		    background-color: #62BB47;
+		    text-align: center;
+		    vertical-align: center;
+		    font-weight: 600;
+		    width: 100%;
+		    font-size: 15px;
+		    padding: 10px 0px 10px 0px;
+		    color: #FFF;
+		    border-radius: 5px;
 		}
 	}
 }
