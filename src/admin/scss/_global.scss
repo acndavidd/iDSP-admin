@@ -337,9 +337,30 @@ textarea:focus{
 
     td {
         &.main-td {
-        min-width: 100px;
-        height: 40px;
-        border: 1px solid $white;
+            min-width: 100px;
+            height: 40px;
+            border: 1px solid $white;
+
+            &.click {
+                cursor: pointer;
+            }
+
+            .arrow-desc{
+                float: left;
+                width: calc(100% - 20px);
+            }
+            .arrow-sort{
+                float: left;
+                background: url(#{$icon-arrow-sort})no-repeat;
+                background-position: center;
+                background-size: 16px;
+                width: 16px;
+                height: 16px;
+
+                &.up{
+                    transform: rotate(180deg);
+                }
+            }
         }
 
         &.detail-capt-td {

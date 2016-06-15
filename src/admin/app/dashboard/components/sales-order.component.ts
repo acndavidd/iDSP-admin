@@ -8,6 +8,7 @@ import {HeaderService} from '../../shared/services/header.service';
 import {NgModel} from 'angular2/common';
 import {FilterComponent} from '../../shared/components/filter.component';
 import {DashboardService} from '../services/dashboard.service';
+import {SortService} from '../../shared/services/sort.service';
 
 @Component({
     selector: 'sales-order',
@@ -18,7 +19,8 @@ import {DashboardService} from '../services/dashboard.service';
         FilterComponent
     ],
     providers: [
-        DashboardService
+        DashboardService,
+        SortService
     ]
 })
 
@@ -31,7 +33,8 @@ export class SalesOrderComponent {
         private _matchMediaService: MatchMediaService,
         private _pageNavigationService: PageNavigationService,
         private _headerService: HeaderService,
-        private _dashboardService: DashboardService
+        private _dashboardService: DashboardService,
+        private _sortService: SortService
     ) {
         window.scrollTo(0,0);
         this._layoutService.setCurrentPage('SalesOrder');
@@ -61,5 +64,17 @@ export class SalesOrderComponent {
     
     getSalesOrderList() {
         return this._dashboardService.getSalesOrderList();
+    }
+
+    sort(header:string) {
+        this._sortService.sort(this.getSalesOrderList(), header);
+    }
+
+    getSortStatus(header:string) {
+        if(this._sortService.sortby === undefined) {
+            return false;
+        }else {
+            return this._sortService.sortby[header]; 
+        }
     }
 }

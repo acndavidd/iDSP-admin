@@ -1,11 +1,28 @@
+import {Injectable} from 'angular2/core';
+
+@Injectable ()
 export class SortService {
     
-    sortby = {
-        asc: true
-    };
+    sortby;
 
     sort(tableData: any, header:string) {
-        if(this.sortby.asc) {
+        // if sortby undefined, declare sortby as array
+        // else insert to sortby array
+        if(this.sortby === undefined) {
+            this.sortby = [header];
+        }else {
+            this.sortby.push(header);
+        }
+
+        // define sort by asc or dsc
+        if(this.sortby[header] === undefined) {
+            this.sortby[header] = true;
+        }else {
+            this.sortby[header] = !this.sortby[header];
+        }
+
+        // start sorting
+        if(this.sortby[header]) {
             tableData.sort((a, b) => {
                 if(a[header] > b[header]) {
                     return 1;
@@ -26,6 +43,5 @@ export class SortService {
                 }
             });
         }
-        this.sortby.asc = !this.sortby.asc;
     }
 }
