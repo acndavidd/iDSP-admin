@@ -513,45 +513,8 @@ LIST VIEW - ICON MENU
 ===========================================================
 */
 
-&.mydashboard {
-    background: url(#{$icon-round-grad-mydashboard})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-
-&.bcp {
-    background: url(#{$icon-round-grad-bcp})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.inventory {
-    background: url(#{$icon-round-grad-inventory})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.logout {
-    background: url(#{$icon-round-grad-logout})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
 &.remittance {
     background: url(#{$icon-round-grad-remittance})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.stock-return {
-    background: url(#{$icon-round-grad-stock-return})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.target {
-    background: url(#{$icon-round-grad-target})no-repeat;
     background-position-x: center;
     background-position-y: center;
     background-size: 15vw;
@@ -562,26 +525,8 @@ LIST VIEW - ICON MENU
     background-position-y: center;
     background-size: 15vw;
 }
-&.alert {
-    background: url(#{$icon-round-grad-alert})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
 &.collection {
     background: url(#{$icon-round-grad-collection})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.retailer-route {
-    background: url(#{$icon-round-grad-retailer-route})no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-size: 15vw;
-}
-&.sync {
-    background: url(#{$icon-round-grad-sync})no-repeat;
     background-position-x: center;
     background-position-y: center;
     background-size: 15vw;
