@@ -24,64 +24,45 @@
             <div class="scrolled-x">
                 <table id="table" class="main-table">
                     <tr class="main green">
-                        <td class="main-td">Order #</td>
-                        <td class="main-td">Date</td>
-                        <td class="main-td">Amount</td>
-                        <td class="main-td">Retailer  Name</td>
+                        <td class="main-td click" (click)="sort('OrderNo')">
+                            <div class="arrow-desc">Order #</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('OrderNo')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
+                        <td class="main-td click" (click)="sort('Date')">
+                            <div class="arrow-desc">Date</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('Date')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
+                        <td class="main-td click" (click)="sort('Amount')">
+                            <div class="arrow-desc">Amount</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('Amount')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
+                        <td class="main-td click" (click)="sort('RetailerName')">
+                            <div class="arrow-desc">Retailer Name</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('RetailerName')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
                         <td class="main-td">Retailer SMART MIN</td>
                         <td class="main-td">Retailer SUN MIN</td>
-                        <td class="main-td">DSP Name</td>
+                        <td class="main-td click" (click)="sort('DSPName')">
+                            <div class="arrow-desc">DSP Name</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('DSPName')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
                         <td class="main-td">DSP MIN</td>
                     </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link" (click)="goToOrderDetail('12345')">12345</a></td>
-                        <td class="main-td">2016-04-18 13:00</td>
-                        <td class="main-td">P 3,000</td>
-                        <td class="main-td"><a class="underline-link" (click)="goToRetailerDetail('Gloria')">Gloria Cell</a></td>
-                        <td class="main-td">9999000014</td>
-                        <td class="main-td">9999000016</td>
-                        <td class="main-td"><a class="underline-link" (click)="goToUserDetail('Surya')">Surya Santoso</a></td>
-                        <td class="main-td">9999000001</td>
-                    </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td"><a class="underline-link">12346</a></td>
-                        <td class="main-td">2016-04-18 14:00</td>
-                        <td class="main-td">P 4,000</td>
-                        <td class="main-td"><a class="underline-link">Bird Cell</a></td>
-                        <td class="main-td">9999000018</td>
-                        <td class="main-td">9999000024</td>
-                        <td class="main-td"><a class="underline-link">Surya Santoso</a></td>
-                        <td class="main-td">9999000001</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link">12347</a></td>
-                        <td class="main-td">2016-04-18 15:00</td>
-                        <td class="main-td">P 7,000</td>
-                        <td class="main-td"><a class="underline-link">Rose Cell</a></td>
-                        <td class="main-td">9999000020</td>
-                        <td class="main-td">9999000027</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
-                    </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td"><a class="underline-link">12348</a></td>
-                        <td class="main-td">2016-04-18 16:00</td>
-                        <td class="main-td">P 10,000</td>
-                        <td class="main-td"><a class="underline-link">ABC Cell</a></td>
-                        <td class="main-td">9999000022</td>
-                        <td class="main-td">9999000029</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link">12349</a></td>
-                        <td class="main-td">2016-04-18 17:00</td>
-                        <td class="main-td">P 2,500</td>
-                        <td class="main-td"><a class="underline-link">DEF Cell</a></td>
-                        <td class="main-td">9999000024</td>
-                        <td class="main-td">9999000030</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
+                    <!--content-->
+                    <tr class="main" [ngClass]="{gainsboro: (i%2)==0, 'white-smoke': (i%2)==1}" *ngFor="#item of getCollectionAmountList(); #i = index">
+                        <td class="main-td"><a class="underline-link" (click)="goToOrderDetail('12345')">{{item.OrderNo}}</a></td>
+                        <td class="main-td">{{item.Date}}</td>
+                        <td class="main-td">P{{item.Amount}}</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToRetailerDetail('Gloria')">{{item.RetailerName}}</a></td>
+                        <td class="main-td">{{item.RetailerSMARTMIN}}</td>
+                        <td class="main-td">{{item.RetailerSUNMIN}}</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToUserDetail('Surya')">{{item.DSPName}}</a></td>
+                        <td class="main-td">{{item.DSPMIN}}</td>
                     </tr>
                 </table>
             </div>
