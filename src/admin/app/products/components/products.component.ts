@@ -19,7 +19,8 @@ import {ProductsService} from '../services/products.service';
         FilterComponent
     ],
     providers: [
-        ProductsService
+        ProductsService,
+        SortService
     ]
 })
 

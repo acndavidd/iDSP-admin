@@ -27,63 +27,36 @@
                 <table id="table" class="main-table">
                     <tr class="main green">
                         <td class="main-td">Order #</td>
-                        <td class="main-td">Order Creation Date</td>
-                        <td class="main-td">DSP Name</td>
+                        <td class="main-td click" (click)="sort('OrderCreationDate')">
+                            <div class="arrow-desc">Order Creation Date</div> 
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('OrderCreationDate')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
+                        <td class="main-td click" (click)="sort('DSPName')">
+                            <div class="arrow-desc">DSP Name</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('DSPName')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
                         <td class="main-td">DSP MIN</td>
-                        <td class="main-td">Retailer  Name</td>
+                        <td class="main-td click" (click)="sort('RetailerName')">
+                            <div class="arrow-desc">Retailer Name</div>
+                            <div class="arrow-sort" [ngClass]="{up: getSortStatus('RetailerName')}"></div>
+                            <div class="clear-fix"></div>
+                        </td>
                         <td class="main-td">Total Amount</td>
                         <td class="main-td">Transfer Load</td>
                         <td class="main-td">Physical Order</td>
                     </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link" (click)="goToOrderDetail('12345')">12345</a></td>
-                        <td class="main-td">2016-05-18 13:00</td>
-                        <td class="main-td"><a class="underline-link" (click)="goToUserDetail('Surya')">Surya Santoso</a></td>
-                        <td class="main-td">9999000001</td>
-                        <td class="main-td"><a class="underline-link" (click)="goToRetailerDetail('Gloria')">Gloria Cell</a></td>
-                        <td class="main-td">P 2,000</td>
-                        <td class="main-td">P 500</td>
-                        <td class="main-td">P 1,500</td>
-                    </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td"><a class="underline-link">12346</a></td>
-                        <td class="main-td">2016-05-18 14:00</td>
-                        <td class="main-td"><a class="underline-link">Surya Santoso</a></td>
-                        <td class="main-td">9999000001</td>
-                        <td class="main-td"><a class="underline-link">Bird Cell </a></td>
-                        <td class="main-td">P 2,000</td>
-                        <td class="main-td">P 1,000</td>
-                        <td class="main-td">P 1,000</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link">12347</a></td>
-                        <td class="main-td">2016-05-18 15:00</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
-                        <td class="main-td"><a class="underline-link">Rose Cell</a></td>
-                        <td class="main-td">P 5,500</td>
-                        <td class="main-td">P 2,000</td>
-                        <td class="main-td">P 3,500</td>
-                    </tr>
-                    <tr class="main white-smoke">
-                        <td class="main-td"><a class="underline-link">12348</a></td>
-                        <td class="main-td">2016-05-18 16:00</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
-                        <td class="main-td"><a class="underline-link">ABC Cell</a></td>
-                        <td class="main-td">P 4,000</td>
-                        <td class="main-td">P 1,500</td>
-                        <td class="main-td">P 2,500</td>
-                    </tr>
-                    <tr class="main gainsboro">
-                        <td class="main-td"><a class="underline-link">12349</a></td>
-                        <td class="main-td">2016-05-18 17:00</td>
-                        <td class="main-td"><a class="underline-link">Agnes Saraswati</a></td>
-                        <td class="main-td">9999000002</td>
-                        <td class="main-td"><a class="underline-link">DEF Cell</a></td>
-                        <td class="main-td">P 4,500</td>
-                        <td class="main-td">P 2,500</td>
-                        <td class="main-td">P 1,500</td>
+
+                    <tr class="main" [ngClass]="{gainsboro: (i%2)==0, 'white-smoke': (i%2)==1}" *ngFor="#item of getSalesOrderList(); #i = index">
+                        <td class="main-td"><a class="underline-link" (click)="goToOrderDetail('12345')">{{item.OrderNo}}</a></td>
+                        <td class="main-td">{{item.OrderCreationDate}}</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToUserDetail('Surya')">{{item.DSPName}}</a></td>
+                        <td class="main-td">{{item.DSPMIN}}</td>
+                        <td class="main-td"><a class="underline-link" (click)="goToRetailerDetail('Gloria')">{{item.RetailerName}}</a></td>
+                        <td class="main-td">{{item.TotalAmount}}</td>
+                        <td class="main-td">{{item.TransferLoad}}</td>
+                        <td class="main-td">{{item.PhysicalOrder}}</td>
                     </tr>
                 </table>
             </div>
